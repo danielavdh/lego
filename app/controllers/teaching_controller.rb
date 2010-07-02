@@ -2,7 +2,7 @@ require 'icalendar'
 
 class TeachingController < ApplicationController
   include TeachingHelper
-  before_filter :authorize, :except => [:studentzone, :courses, :classes, :directions, :contact]
+  before_filter :authorize, :except => [:courses, :classes, :directions, :contact]
   before_filter :generate_key
   
   def index
