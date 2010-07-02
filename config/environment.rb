@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -20,8 +20,8 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-   config.gem "ri_cal", :version => ">= 0.8.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
-   config.gem "icalendar", :version => ">= 1.1.0" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
+   ###config.gem "ri_cal", :version => ">= 0.8.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
+   ###config.gem "icalendar", :version => ">= 1.1.0" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
