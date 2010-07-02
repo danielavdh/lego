@@ -1,6 +1,6 @@
 <% if session[:user_id] || session[:sudo_id]%>
 <% playingClass = %w{w_playing w_playing w_playing w_playing w_playing w_playing w_playing} %>
-<% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching} %>
+<% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching_passive w_teaching} %>
 <% elsif session[:friend_id] || session[:guest_id] %>
 <% playingClass = %w{w_playing_passive w_playing w_playing_passive w_playing w_playing_passive w_playing w_playing} %>
 <% teachingClass = %w{w_teaching_passive w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching_passive w_teaching} %>
