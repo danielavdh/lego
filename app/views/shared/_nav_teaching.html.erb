@@ -45,7 +45,7 @@
 									  			   :action => :contact},
 									  			   :class => "teaching_links" %>
 		</td>
-	   <% if session[:user_id] %>
+	   <% if session[:user_id] || session[:sudo_id] %>
 		<td id="projects" 
 			 class="flexi80"><%=link_to "add student", {:controller => :students, 
 									 				   :action => :new},
