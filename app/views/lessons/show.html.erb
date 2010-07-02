@@ -1,0 +1,31 @@
+<% if session[:student_id] %>
+
+<h1 class="book_lesson_text"><%= @date %></h1>
+<h1 class="book_lesson_text"><%= I18n.t("lessons.start") %><%=h @time %> <%= I18n.t("lessons.hour") %></h1>
+<h1 class="book_lesson_text"><%= I18n.t("lessons.name") %>: <%=h @student.firstname + " " + @student.lastname %> </h1>
+<h1 class="book_lesson_text"><%= I18n.t("lessons.email.address") %>: <%=h @student.email %> </h1>
+
+
+<%= link_to I18n.t("lessons.back_cal"), {:controller => :teaching, :action => :studentzone, :year => @year, :month => @month}, :class => "book_lesson_links" %>
+<% if @lesson.color=="#2E8B57"%>
+	<%= link_to I18n.t("lessons.book"), {:action => :book_lesson, :id => @lesson, :year => @year, :month => @month}, :class => "book_lesson_links"  %>
+<% else %>
+	<%= link_to I18n.t("lessons.cancel"), {:action => :cancel_lesson, :id => @lesson, :year => @year, :month => @month}, :class => "book_lesson_links"  %>
+<% end %>
+
+<% elsif session[:user_id] %>
+
+<h1 class="book_lesson_text"><%= @date %></h1>
+<h1 class="book_lesson_text">Lesson starting at <%=h @time %></h1>
+<% if @lesson.name.split()[1].blank? %>
+	<h1 class="book_lesson_text">This lesson has not been booked yet</h1>
+<% else %>
+	<h1 class="book_lesson_text">This lesson is booked by <%= @lesson.name.split()[1..-2].join(" ") %></h1>
+<% end %>
+
+<%= link_to 'Back to calendar', {:controller => :teaching, :action => :studentzone, :year => @year, :month => @month}, :class => "book_lesson_links" %>
+<%= link_to 'Remove lesson', {:action => :destroy, :year => @year, :month => @month}, :confirm => 'Are you sure?', :method => :delete, :class => "book_lesson_links"  %>
+
+<% end %>
+
+

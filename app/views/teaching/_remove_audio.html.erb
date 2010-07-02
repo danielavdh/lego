@@ -1,0 +1,34 @@
+<div id="audio_remove">
+
+	<p class="cache_note">please note:<br />if you get errors after re-arranging the pieces in your audio player, empty your browser's cache and reload the page a few times
+	</p>
+	<hr style="border: 1px solid #999999;" /><br />
+	<p class="remove_audio_name"><%= @student.firstname + " " + @student.lastname %>
+		<span id="close_btn">
+	    <%= button_to_remote I18n.t("general.close"), :url => {:action => 'close_window',
+										       :div_id => 'audio_area'} %>
+		</span>
+	</p>
+	
+	<ul class="remove_audio">
+	<% form_remote_tag(:url => {:action => 'delete_mp3',
+									:id => @student.id}) do %>
+		
+		<% for i in 0..(@titles.length-1) %>							
+	
+			<li><%= @titles[i] %>
+				<span>
+		    	<%= button_to_remote 'remove', :url => {:action => 'delete_mp3',
+														:id => @student.id,
+											   			:mp3_nr => i} %>
+				</span>
+			</li>
+			
+		<% end %>
+		
+		<%#= submit_tag 'remove audio', :class => 'hideStudentButton' %>
+	
+	<% end %>
+	</ul>
+	
+</div>

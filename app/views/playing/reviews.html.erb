@@ -1,0 +1,25 @@
+<style type="text/css">
+body {
+background-color: #dddddd;
+}
+</style>
+
+<div id="reviewsContent">
+
+<% @articles.each do |a| %>
+
+<div class="articleDiv">
+	
+	<h3 class="flexi100"><%= a.publisher %><span class="flexi50">, <%= a.publish_date.to_date.to_formatted_s(:rfc822) if a.publish_date %><%= a.author %></span></h3>
+
+	<p class="flexi80"><%= a.artists %><%= ", " unless a.venue.blank? %><%= a.venue %></p>
+
+	<div class="articleContent">
+		<%= a.content %>
+	</div>
+
+</div><hr style="margin:0px 30px; border: 2px ridge #ccc6c6;" />
+
+<% end %>
+
+</div>

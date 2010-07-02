@@ -1,0 +1,79 @@
+<div id="mediaLinks">
+	
+	<% if session[:user_id] || session[:sudo_id] %>
+	<div class="wrapper" 
+	     style="left:2%; cursor:default;"
+	     onmouseover='leonid.movies.hideEffect("<%= @accessLevel %>", "lgVid");'>
+
+		 <p class="flexi100"
+		    onmouseover="Effect.SlideDown('leonidVideo');">Video<br />Leonid Gorokhov</p>
+
+		<div id="leonidVideo" style="display:none; width:100%; text-align:center;">
+		  <div style="width:80%; margin:3% 9%; padding:7% 1% 4%; background-color:#ddd;">
+			
+			<% for i in 0..(@lg_works[0].length-1) %>
+		    <p class="flexi80"><%= link_to_remote (@lg_works[0][i] + "<br />" + @lg_works[1][i]), :url => {:action => :play_video, :video => "leonid#{(i+1).to_s}.m4v", :size => "medium" }%></p>
+			<% end %>
+			
+		  </div>
+		</div>
+	</div>
+	<% end %>               
+
+	<% unless session[:guest_id] %>
+	<div class="wrapper" 
+	     style="left:27.5%; cursor:default;"
+	     onmouseover='leonid.movies.hideEffect("<%= @accessLevel %>", "hstVid");'>
+		 <p class="flexi100"
+		    onmouseover="Effect.SlideDown('hstVideo');">Video<br />Hermitage String Trio</p>
+
+		<div id="hstVideo" style="display:none; width:100%; text-align:center;">
+		  <div style="width:80%; margin:3% 9%; padding:7% 1% 4%; background-color:#ddd;">
+
+			<% for i in 0..(@hst_works[0].length-1) %>
+		    <p class="flexi80"><%= link_to_remote (@hst_works[0][i] + "<br />" + @hst_works[1][i]), :url => {:action => :play_video, :video => "hst#{(i+1).to_s}.m4v" , :size => "medium"}%></p>
+			<% end %>
+
+		  </div>
+		</div>
+	</div>               
+
+	<div class="wrapper" 
+	     style="left:52.5%; cursor:default;"
+	     onmouseover='leonid.movies.hideEffect("<%= @accessLevel %>", "seVid");'>
+		 <p class="flexi100"
+		    onmouseover="Effect.SlideDown('specialVideo');">Video<br />Special Events</p>
+
+		<div id="specialVideo" style="display:none; width:100%; text-align:center;">
+		  <div style="width:80%; margin:3% 9%; padding:7% 1% 4%; background-color:#ddd;">
+
+			<% for i in 0..(@sp_works[0].length-1) %>
+		    <p class="flexi80"><%= link_to_remote (@sp_works[0][i] + "<br />" + @sp_works[1][i]), :url => {:action => :play_video, :video => "special#{(i+1).to_s}.m4v", :size => "medium"}%></p>
+			<% end %>
+
+		  </div>
+		</div>
+	</div>
+	<% end %>               
+
+	<div class="wrapper" 
+		 style="left:76%; cursor:pointer;"
+	     onmouseover='leonid.movies.hideEffect("<%= @accessLevel %>", "lgAud"); $("audioClick").style.visibility="visible";'
+		 onmouseout="$('audioClick').style.visibility='hidden';">
+		 <p class="flexi100"
+			onclick="<%= remote_function(:url => {:action => :play_audio}) %>">Audio<br />Leonid Gorokhov<br /><span id="audioClick" style="visibility:hidden;"><em>click to listen</em></span></p>
+
+	</div>
+	
+</div>
+
+<div id="mediaBlanket"
+	 style="display:none;">
+</div>
+<div id="audio_area">
+</div>
+<div id="video_area">
+</div>
+
+
+

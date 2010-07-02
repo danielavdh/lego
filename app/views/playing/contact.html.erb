@@ -1,0 +1,17 @@
+<%= link_to(image_tag("/images/playing/pro_artist.jpg",
+					  :id => "contact_image",
+					  :title => "opens ProArtist in a new window",
+					  :alt => "Pro Artist"),
+ 					  "http://www.proartist.co.uk/leonid_gorokhov.html",
+					  {:target => "blank"})%>
+					
+<div id="contact_text">
+	<p class="flexi120"><b>PRO ARTIST</b></p>
+	<p class="flexi120">54 Beaconsfield Road - London - SE3 7LG - UK</p>
+	<p class="flexi120">Telephone: +44 (0) 20 8858 0785</p>
+	<p class="flexi120">Mobile: +44 (0) 794 108 3038</p>
+	<p class="flexi120">Fax: +44 (0) 20 8269 1722</p>
+	<p class="flexi120">Email: <%= mail_to "info@proartist.co.uk", "Aminah Domloge", :subject => "re: Leonid Gorokhov", :class => "flexi100" %> - <%= mail_to "info@proartist.co.uk", "info@proartist.co.uk", :subject => "re: Leonid Gorokhov", :class => "flexi100" %></p>
+	
+</div>
+

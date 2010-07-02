@@ -1,0 +1,10 @@
+<div id="audio_content">
+	<p><%= student.firstname + " " + student.lastname %></p>
+
+	<%= button_to_remote I18n.t("general.close"), :url => {:action => 'stop_audio',
+								  		   :id => student.id} %>
+	<div id="audioSWF">
+		<h5>alternative_content</h5>
+	</div>
+	
+</div>

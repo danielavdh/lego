@@ -1,0 +1,13 @@
+<div style="position:absolute; width:100%;">
+<div id="bodyLangLogStrip">
+   <%= link_to "LOG", {:controller => :admins, :action => "login" },
+ 					   :style => "visibility:hidden;" %>
+</div>
+<div id="bodyNavigationStrip">
+	<ul class="navigation">
+		 <li><%=link_to "playing", {:controller => :playing,
+									:action => :index},
+									:style => "visibility:hidden;" %></li>
+	</ul>
+</div>
+</div>

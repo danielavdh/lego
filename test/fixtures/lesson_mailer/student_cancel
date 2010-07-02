@@ -1,0 +1,3 @@
+LessonMailer#student_cancel
+
+Find me in app/views/lesson_mailer/student_cancel.erb

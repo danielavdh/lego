@@ -1,0 +1,57 @@
+<h1>Editing article</h1>
+
+<% form_for(@article) do |f| %>
+  <%= f.error_messages %>
+
+	<fieldset class="admin_fieldset">
+		<legend class="admin_legend">Edit Article</legend>
+    	<p>
+    	  <%= f.label :language %><br />
+    	  <%= f.text_field :language, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :display %><br />
+    	  <%= f.text_field :display, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :publish_date %><br />
+    	  <%= f.text_field :publish_date, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :concert_date %><br />
+    	  <%= f.text_field :concert_date, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :publisher %><br />
+    	  <%= f.text_field :publisher, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :author, 'author' %>:<br />
+    	  <%= f.text_field :author, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :venue, 'venue' %>:<br />
+    	  <%= f.text_field :venue, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :artists, 'artists' %>:<br />
+    	  <%= f.text_field :artists, :size => 55, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :content, 'content' %>:<br />
+    	  <%= f.text_area :content, :size => '55x30', :class => 'input_form' %>
+    	</p>
+    	
+		<p style="padding-left: 10px;">
+    	<%= f.submit "Update Article" , :class => "submit_form" %>
+		<span style="padding-left: 100px;">
+		<%= link_to 'Show', @article, :class => 'admin_links'  %> | 
+		<%= link_to 'Back', articles_path, :class => 'admin_links'  %>
+		</span>
+    	</p>
+
+	</fieldset>
+<% end %>
+
+
+

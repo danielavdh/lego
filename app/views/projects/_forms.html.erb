@@ -1,0 +1,63 @@
+<% form_for(@project) do |f| %>
+  <%= f.error_messages %>
+
+	<fieldset class="admin_fieldset">
+		<legend class="admin_legend"><%= text %></legend><br /><br />
+		<table id="projectForm" style="color: white;">
+			<tr>
+				<!-- <td class="flexi80">
+    	  		<%#= f.label :language %>
+		  		<%#= f.select :language, ([["English", "en"], ["Deutsch", "de"], ["русский", "py"]]), :class => 'input_form' %>
+				</td> -->
+				<td class="flexi80">
+    	  		<%= f.label :event_type, "Please choose event type! "%><br />
+				</td>
+				<td class="flexi80" style="text-align:left; padding-left:2%;">
+		  		<%= f.select :event_type, %w{ concert HST-concert course masterclass }, :class => 'input_form' %>
+				</td>
+				<td class="flexi80" style="text-align:right; padding-right:2%;">
+    	  		<%= f.label :start_date %>
+    	  		<%= f.date_select(:start_date, :order => [:day, :month, :year], :start_year => Time.now.year - 0, :end_year => Time.now.year + 5) %>
+				</td>
+			</tr>
+			<tr>
+				<td class="flexi50" style="color:#ffff99;">
+					HST concerts only listed on<br />trio page if selected here!
+				</td>
+				<td class="flexi80">
+				</td>
+				<td class="flexi80" style="text-align:right; padding-right:2%;">
+    	  <%= f.label :end_date, 'End date - only select if event longer than 1 day' %><br />
+    	  <%= f.date_select(:end_date, :order => [:day, :month, :year], :start_year => Time.now.year - 0, :end_year => Time.now.year + 5, :prompt => ['day', 'month', 'year']) %>
+				</td>
+			</tr>
+		</table><br />
+    	<p class="flexi80" style="font-style:normal;">
+    	  <%= f.label :line_1, 'Location:'%><br />
+    	  <%= f.text_field :line_1, :size => 100, :class => 'input_form' %>
+    	</p><br />
+    	<p class="flexi80" style="font-style:normal;">
+    	  <%= f.label :line_2, 'Composer/s (for concerts) or event title:' %><br />
+    	  <%= f.text_field :line_2, :size => 100, :class => 'input_form' %>
+    	</p><br />
+    	<p class="flexi80" style="font-style:normal;">
+    	  <%= f.label :line_3, 'With whom (for concerts) or more text about event if needed:'%><br />
+    	  <%= f.text_field :line_3, :size => 100, :class => 'input_form' %>
+    	</p><br />
+    	<p class="flexi80" style="font-style:normal;">
+    	  <%= f.label :line_4, 'Webaddress (only for concerts):' %><br />
+    	  <%= f.text_field :line_4, :size => 100, :class => 'input_form' %>
+    	</p><br />
+    	
+		<p  class="flexi80" style="padding-left: 10px;">
+    	<%= f.submit link_text , :class => "submit_form" %>
+		<span style="padding-left: 100px;">
+		<%= link_to 'Back', projects_path, :class => 'project_links'  %>
+		</span>
+    	</p><br />
+
+	</fieldset>
+
+<% end %>
+
+

@@ -1,0 +1,204 @@
+/********************************* ADMINS/LOGIN *************************************/
+p.flash_notice{
+padding-top: 10px;
+padding-left: 130px;
+color: #006633;
+text-align: left;
+}
+table.index{
+margin-top: 6px;
+}
+table#admins_table{
+margin-left: 100px;
+}
+tr.title_row{
+background-color: #cccccc;
+}
+tr.list-line-odd{	background-color: #bbbbee;
+}
+tr.list-line-even{
+background-color: #ccccff;
+}
+td, th{
+padding: 10px;
+}
+h1{
+text-align: left;
+margin-left: 105px;
+}
+fieldset.login_fieldset, fieldset.admin_fieldset{
+position: absolute;
+top: 40px;
+left: 100px;
+margin: 5px;
+margin-top: 40px;
+width: 500px;
+padding: 20px;
+border: 3px solid #4444ff;
+text-align: left;
+}
+fieldset.login_fieldset{
+top: 20px;
+}
+legend.login_legend, legend.admin_legend{
+padding: 5px;
+font-size: 16pt;
+color: #4444ff;
+}
+form{
+font-size: 12pt;
+color: #0066cc;
+}
+form.new_admin .errorExplanation, form.edit_admin .errorExplanation{
+color: red;
+position: absolute;
+top: 300px;
+left: 105px;
+}
+label{
+padding-left: 5px;
+color: #4444ff;
+}
+.input_login, .input_form{
+font-size: 10pt;
+color: black;
+background-color: #eeeeee;
+}
+.submit_login, .submit_form{
+width: 120px;
+font-size: 14pt;
+font-weight: bold;
+color: #4444ff;
+cursor:pointer;
+}
+.submit_form{
+margin-top: 20px;
+}
+a.admin_links:link{
+padding-left: 12px;
+padding-right: 20px;
+font-size: 14pt;
+color: #4444ff;
+}
+a.admin_links:visited{
+color: #4444ff;
+}
+a.admin_links:hover{
+color: #8888ff;
+}
+input#student_button{
+position: absolute;
+top: 330px;
+left: 128px;
+width: 200px;
+font-size: 1.5em;
+color: #cc0000;
+}
+/*p.show_team{
+	padding: 10px;
+	font-size: 12pt;
+	color: white;
+}
+span.show_title{
+	padding-right: 10px;
+	color: #ffff80;
+}
+img.team_image{
+height: 100px;
+border: 2px ridge #101033;
+}*/
+span.reset_upload{
+color: #aa0000;
+cursor: pointer;
+}
+/*input.file_upload{
+color:white;
+}*/
+/********************************* LESSONS *************************************/
+form.lessons_form{
+margin-top: 50px;
+}
+h3#lesson1, h3#lesson2, h3#lesson3, h3#lesson4, h3#lesson5, h3#lesson6, h3#lesson7, h3#lesson8, h3#lesson9{
+display: none;
+}
+span.lessons_text{
+margin-right: 20px;
+}
+select.lessons_select{
+font-size: 0.9em;
+vertical-align: text-top;
+}
+h1.book_lesson_text{
+margin: 40px;
+}
+a.book_lesson_links:link, a.book_lesson_links:visited{
+font-size: 1.5em;
+padding: 0px 30px;
+}
+a.book_lesson_links:hover{
+background-color: #dddddd;
+}
+/********************************* STUDENTS *************************************/
+fieldset.student_fieldset{
+color: #000099;
+width: 900px;
+}
+fieldset.student_fieldset legend, label, a:link, a:visited{
+color: #000099;
+}
+fieldset.student_fieldset a:hover{
+color: #0000ff;
+background-color: #dddddd;
+}
+div#student_list a:link, a:visited{
+color: #000099;
+}
+div#student_list a:hover{
+color: #0000ff;
+}
+div#student_show{
+margin: 50px 100px;
+text-align: left;
+}
+div#student_show p{
+line-height: 2em;
+}
+div#student_show a:link, a:visited{
+}
+div#student_show a:hover{
+color: #0000ff;
+background-color: #dddddd;
+}
+div#student_show span{
+padding: 0px 20px;
+}
+div#student_edit{
+margin: 10px 50px;
+text-align: left;
+}
+div.student_edit_col{
+margin: 10px 100px 30px -3px;
+float: left;
+}
+div.fieldWithErrors, div.formError{
+display: inline;
+}
+div.formError{
+margin-left: 5px;
+color: #cc0000;
+}
+/********************************* ARTICLES *************************************/
+div.articleDiv{
+text-align: left;
+margin: 20px;
+}
+div.articleDiv p{
+margin-top: -15px;
+}
+div.articleContent p{
+margin-top: 10px;
+}
+span.publishSpan{
+font-weight: normal;
+font-size: 0.8em;
+}

@@ -1,0 +1,55 @@
+<div id="student_show">
+	<p>
+	<%= link_to 'Edit '+@student.firstname, edit_student_path(@student) %> |
+	<%= link_to 'Back to student list', students_path %> | 
+	<%= link_to 'Back to calendar', :controller => :teaching, :action => :studentzone %>
+
+	</p><br />
+
+	<p>
+	<b>Name:</b>
+	<%=h @student.firstname + " " + @student.lastname%>
+	</p>
+
+	<p>
+	<b>Email:</b>
+	<%= mail_to @student.email, @student.email%>
+	</p>
+	<p>
+	<b>After 15.30h:</b>
+	<%=h @student.after_school%>
+	</p>
+
+	<p>
+	<b>Address:</b><br />
+	<% unless @student.address1.blank?%>
+		<span><%=h @student.address1 %></span><br />
+	<% end %>
+	<% unless @student.address2.blank?%>
+		<span><%=h @student.address2 %></span><br />
+	<% end %>
+	<% unless @student.address3.blank?%>
+		<span><%=h @student.address3 %></span><br />
+	<% end %>
+	<% unless @student.address4.blank?%>
+		<span><%=h @student.address4 %></span><br />
+	<% end %>
+	<% unless @student.address5.blank?%>
+		<span><%=h @student.address5 %></span><br />
+	<% end %>
+	</p>
+
+	<p>
+	<b>Telephone:</b><br />
+	<% unless @student.phone1.blank?%>
+		<span><%=h @student.phone1 %> (home)</span><br />
+	<% end %>
+	<% unless @student.phone2.blank?%>
+		<span><%=h @student.phone2 %> (mobile)</span><br />
+	<% end %>
+	<% unless @student.phone3.blank?%>
+		<span><%=h @student.phone3 %> (other)</span><br />
+	<% end %>
+	</p>
+
+</div>

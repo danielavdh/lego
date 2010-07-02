@@ -1,0 +1,44 @@
+<h3 style="color:white; margin-top:10%;">
+<%= link_to 'New project', new_project_path, :class => "project_links", :id => "newProjectLink" %></h3>
+
+<table id="projectList">
+  <tr>
+	<td colspan=10 class="flexi80" style="text-align:left; color:#ffff99;">
+	LARISSA: Click "new project" to create a new project, or "edit" (next to an existing project) to change it.<br />
+	If there are no current projects, nothing will be displayed on the "biography" page. You can fill in as many in advance as you like, the biography page will automatically update to show whatever exists of maximum 3 next concerts, 1 next course and 1 next masterclass from today's date<br />
+	<span style="color:#99ff99;">DO NOT WORRY!! IF YOU MAKE A MISTAKE, YOU CAN ALWAYS EDIT THE MISTAKE YOU MADE</span>
+	</td>
+  </tr>
+  <tr class="title_row">
+	<th class="flexi80" style="background-color:#ffff99;">CLICK BELOW TO EDIT</th>
+	<th class="flexi80">event type</th>
+	<th class="flexi80">start date</th>
+    <th class="flexi80">end date</th>
+    <th class="flexi80">line 1</th>
+	<th class="flexi80">line 2</th>
+    <th class="flexi80">line 3</th>
+    <th class="flexi80">web address</th>
+	<th class="flexi80">language</th>
+	<% if @superuser %>
+	<th class="flexi80"></th>
+	<% end %>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="flexi80"><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td class="flexi80"><%=h project.event_type %></td>
+    <td class="flexi80"><%=h project.start_date.to_date %></td>
+	<td class="flexi80"><%=h project.end_date.to_date unless project.end_date.blank? %></td>
+    <td class="flexi80"><%=h project.line_1 %></td>
+    <td class="flexi80"><%=h project.line_2 %></td>
+    <td class="flexi80"><%=h project.line_3 %></td>
+    <td class="flexi80"><%=h truncate(project.line_4, :length => 15) %></td>
+    <td class="flexi80"><%=h project.language %></td>
+	<% if @superuser %>
+    <td class="flexi80"><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>

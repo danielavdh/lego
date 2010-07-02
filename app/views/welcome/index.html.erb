@@ -1,0 +1,84 @@
+<% if session[:user_id] || session[:sudo_id]%>
+<% playingClass = %w{w_playing w_playing w_playing w_playing w_playing w_playing w_playing} %>
+<% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching} %>
+<% elsif session[:friend_id] || session[:guest_id] %>
+<% playingClass = %w{w_playing_passive w_playing w_playing_passive w_playing w_playing_passive w_playing w_playing} %>
+<% teachingClass = %w{w_teaching_passive w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
+<% else %>
+<% playingClass = %w{w_playing_passive w_playing w_playing_passive w_playing w_playing_passive w_playing_passive w_playing} %>
+<% teachingClass = %w{w_teaching_passive w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
+<% end %>
+
+<style type="text/css">
+body{
+/*background:url(/images/welcome/hand.jpg) no-repeat center top;*/
+background-color: #373d44;
+}
+</style>
+<div id="name_hand">LEONID GOROKHOV
+</div>
+
+<div id="playing_hand">
+	<ul id="play_links">
+		 <li><%=link_to "PERFORMING", {:controller => :playing,
+									:action => :index},
+									:class => playingClass[0], :style => "text-decoration:underline;" %></li>
+		 <li><%=link_to "biography", {:controller => :playing,
+									  :action => :bio},
+									  :class => playingClass[1] %></li>
+		 <li><%=link_to "reviews", {:controller => :playing,
+									 :action => :reviews},
+									 :class => playingClass[2] %></li>
+		 <li><%=link_to "photos", {:controller => :playing,
+								   :action => :photos},
+								   :class => playingClass[3] %></li>
+		 <li><%=link_to "trio", {:controller => :playing,
+								  :action => :chambermusic},
+								  :class => playingClass[4] %></li>
+		 <li><%=link_to "recordings", {:controller => :playing,
+									   :action => :recordings},
+									   :class => playingClass[5] %></li>
+		 <li><%=link_to "contact", {:controller => :playing,
+									   :action => :contact},
+									   :class => playingClass[6] %></li>
+	   <% if session[:user_id] || session[:sudo_id] %>
+		 <li><%=link_to "add project", {:controller => :projects,
+									   :action => :index},
+									   :class => playingClass[6] %></li>
+	   <% end %>
+	</ul>
+</div>
+
+<div id="teaching_hand">
+	<ul id="teach_links">
+		 <li><%=link_to "TEACHING", 
+						{:controller => :teaching,
+						 :action => :index},
+						 :class => teachingClass[0], :style => "text-decoration:underline;" %></li>
+		 <li><%=link_to "courses", {:controller => :teaching,
+									:action => :courses},
+									:class => teachingClass[1] %></li>
+		 <li><%=link_to "masterclasses", {:controller => :teaching,
+									:action => :classes},
+									:class => teachingClass[2] %></li>
+		 <li><%=link_to "videos", {:controller => :teaching,
+										   :action => :recordings},
+										   :class => teachingClass[3] %></li>
+		 <li><%=link_to "students", {:controller => :teaching,
+									 :action => :students},
+									 :class => teachingClass[4] %></li>
+		 <li><%=link_to "studentzone", {:controller => :teaching,
+								 		:action => :studentzone},
+								 		:class => teachingClass[5] %></li>
+		 <li><%=link_to "contact", {:controller => :teaching,
+								 :action => :contact},
+								 :class => teachingClass[6] %></li>
+	   <% if session[:user_id] || session[:sudo_id] %>
+   	 	 <li><%=link_to "add&nbsp;student", {:controller => :students, 
+									 :action => :index},
+									 :class => teachingClass[6] %></li>
+	   <% end %>
+	</ul>
+</div>
+
+

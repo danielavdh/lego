@@ -1,0 +1,67 @@
+<style type="text/css">
+body{
+background-color: #161320;
+}
+</style>
+<div>
+<div id="leftGallery">
+	<img class="picLeft"
+		 src="/images/gallery/lg_pr01.jpg" />
+	<img class="picLeft"
+		 src="/images/gallery/lg_pr02.jpg" />
+	<img class="picLeft"
+		 src="/images/gallery/lg_pr03.jpg" />
+	<img class="picLeft"
+		 src="/images/gallery/lg_pr04.jpg" />
+	<img class="picLeft"
+		 src="/images/gallery/lg_pr05.jpg" />
+</div>
+<div id="rightGallery">
+	<img class="picRight"
+		 src="/images/gallery/lg_pr11.jpg" />
+	<img class="picRight"
+		 src="/images/gallery/lg_pr12.jpg" />
+	<img class="picRight"
+		 src="/images/gallery/lg_pr13.jpg" />
+	<img class="picRight"
+		 src="/images/gallery/lg_pr15.jpg" />
+	<img class="picRight"
+		 src="/images/gallery/lg_pr14.jpg" />
+</div>
+<div id="photos_bar">
+	
+	<h3 class="flexi50"><%= I18n.t("playing.photos.title") %></h3>
+	
+<%= link_to(image_tag("/images/gallery/lg_playing.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Leonid Gorokhov"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_1",
+					  :target => "blank")%><br />
+<%= link_to(image_tag("/images/gallery/lg_spring.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Leonid Gorokhov"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_7",
+					  :target => "blank")%><br />
+<%= link_to(image_tag("/images/gallery/lg_bw_head.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Leonid Gorokhov"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_6",
+					  :target => "blank")%><br />
+<%= link_to(image_tag("/images/gallery/lg_leaning_cello.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Leonid Gorokhov"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_2",
+					  :target => "blank")%><br />
+<%= link_to(image_tag("/images/gallery/hst_2.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Hermitage String Trio"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_5",
+					  :target => "blank")%><br />
+<%= link_to(image_tag("/images/gallery/lg_and_nd.jpg",
+					  :title => I18n.t("playing.photos.imgTitleTag"),
+					  :alt => "Leonid Gorokhov and Nikolai Demidenko"),
+ 					  :action => :high_res_photos, :photo => "lg_hres_8",
+					  :target => "blank")%>
+	
+</div>
+</div>

@@ -1,0 +1,42 @@
+<h1>Editing lesson</h1>
+
+<% form_for(@lesson) do |f| %>
+  <%= f.error_messages %>
+
+	<fieldset class="admin_fieldset">
+		<legend class="admin_legend">Edit Event</legend>
+    	<p>
+    	  <%= f.label :created_at %><br />
+    	  <%= f.text_field :created_at, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :updated_at %><br />
+    	  <%= f.text_field :updated_at, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :name %><br />
+    	  <%= f.text_field :name, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :color, 'color' %>:<br />
+    	  <%= f.text_field :color, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :start_at, 'start_at' %>:<br />
+    	  <%= f.text_field :start_at, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :end_at, 'end_at' %>:<br />
+    	  <%= f.text_field :end_at, :size => 40, :class => 'input_form' %>
+    	</p>
+    	
+		<p style="padding-left: 10px;">
+    	<%= f.submit "Update Event" , :class => "submit_form" %>
+		<span style="padding-left: 100px;">
+		<%= link_to 'Back', lessons_path, :class => 'admin_links'  %>
+		</span>
+    	</p>
+
+	</fieldset>
+<% end %>
+

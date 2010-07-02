@@ -1,0 +1,21 @@
+# this is a comment, but careful, after existing text, # is not counted as a comment!!!
+# leonid
+.DS_Store
+admins_controller.rb
+config/environments/*.rb
+database.yml
+session_store.rb
+#### deploy.rb is not symlinked, only on development server
+deploy.rb
+####
+log/*.log
+tmp/**/*
+db/*.sqlite3
+public/audio/
+public/movies/
+public/images/gallery/highres/
+#### not symlinked, only on development server
+app/views/playing/diary.html.erb
+public/images/students/
+####
+vendor/

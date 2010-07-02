@@ -1,0 +1,150 @@
+<% form_for(@student, :url => {:action => action}, :html =>  {:multipart => true}) do |f| %>
+  <%#= f.error_messages %>
+
+	<fieldset class="student_fieldset">
+		<legend class="admin_legend"><%= legend %></legend>
+		<div class="student_edit_col">
+    	<p>
+    	  <%= f.label :firstname %>:<%= error_message_on :student, :firstname %><br />
+    	  <%= f.text_field :firstname, :size => 40, :class => 'input_form' %>
+		</p>
+    	<p>
+    	  <%= f.label :lastname %>:<%= error_message_on :student, :lastname %><br />
+    	  <%= f.text_field :lastname, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :assetsPath %>:<br />
+    	  <%= f.text_field :assetsPath, :size => "40", :class => 'input_form' %>
+    	</p>
+		<% if action_name=="new" || @superuser==true %>
+    	<p>
+    	  <%= f.label :password, 'Password' %>:<%= error_message_on :student, :password %><br />
+    	  <%= f.password_field :password, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :password_confirmation, 'Confirm Password' %>:<%= error_message_on :student, :password_confirmation %><br />
+    	  <%= f.password_field :password_confirmation, :size => 40, :class => 'input_form' %>
+    	</p>
+		<% else %>
+    	<p>
+    	  <%= f.label :created_at %>:<br />
+    	  <%= f.text_field :created_at, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :updated_at, 'Last Updated at' %>:<br />
+    	  <%= f.text_field :updated_at, :size => 40, :class => 'input_form' %>
+    	</p>
+		<% end %>
+    	<p>
+    	  <%= f.label :email %>:<%= error_message_on :student, :email %><br />
+    	  <%= f.text_field :email, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :after_school, "After 15.30h" %>:<%= error_message_on :student, :after_school %><br />
+    	  <%= f.radio_button :after_school, "true", :class => 'input_form' %>true
+    	  <%= f.radio_button :after_school, "false", :class => 'input_form' %>false
+    	</p>
+		</div>
+		<div class="student_edit_col">
+    	<p>
+    	  <%= f.label :address1, 'Address Line 1' %>:<br />
+    	  <%= f.text_field :address1, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :address2, 'Address Line 2' %>:<br />
+    	  <%= f.text_field :address2, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :address3, 'Town/City' %>:<br />
+    	  <%= f.text_field :address3, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :address4, 'County' %>:<br />
+    	  <%= f.text_field :address4, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :address5, 'Country' %>:<br />
+    	  <%= f.text_field :address5, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :phone1, 'Home Phone' %>:<br />
+    	  <%= f.text_field :phone1, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :phone2, 'Mobile Phone' %>:<br />
+    	  <%= f.text_field :phone2, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :phone3, 'Additional Phone' %>:<br />
+    	  <%= f.text_field :phone3, :size => 40, :class => 'input_form' %>
+    	</p>
+		</div>
+    	
+		<% if session[:sudo_id] %>
+		<div class="student_edit_col">
+    	<p>
+    	  <%= f.label :displayed %>:<br />
+    	  <%= f.text_field :displayed, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :web_location1 %>:<br />
+    	  <%= f.text_field :web_location1, :size => 40, :class => 'input_form' %>
+		</p>
+    	<p>
+    	  <%= f.label :web_location2 %>:<br />
+    	  <%= f.text_field :web_location2, :size => 40, :class => 'input_form' %>
+		</p>
+    	<p>
+    	  <%= f.label :birth_date %>:<br />
+    	  <%= f.text_field :birth_date, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :student_period %>:<br />
+    	  <%= f.text_field :student_period, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :pic_name %>:<br />
+    	  <%= f.text_field :pic_name, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :pic_type %>:<br />
+    	  <%= f.text_field :pic_type, :size => 40, :class => 'input_form' %>
+    	</p>
+		<br />
+  		<p>
+  		  <%= f.label :picture, 'upload your picture, max size 100kb' %><br />
+  		  <%= f.file_field :picture, :class => 'input_form', :id=>"pic_upload" %>
+  		  <span class='reset_upload' 
+  		  	  onclick="document.getElementById('pic_upload').value = '';">reset</span>
+  		</p><br />
+    	<p>
+    	  <%= f.label :aud_titles %>:<br />
+    	  <%= f.text_area :aud_titles, :size => "40x6", :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :aud_recDate %>:<br />
+    	  <%= f.text_area :aud_recDate, :size => "40x6", :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :vid_paths %>:<br />
+    	  <%= f.text_area :vid_paths, :size => "40x2", :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :vid_descr %>:<br />
+    	  <%= f.text_area :vid_descr, :size => "40x8", :class => 'input_form' %>
+    	</p>
+		</div>
+		<% end %>
+
+		<p style="padding-left: 10px;">
+    	<%= f.submit submit , :class => "submit_form" %>
+		<span style="padding-left: 30px;">
+		<%= link_to 'Back to student list', students_path %>
+		</span>
+		<span style="padding-left: 30px;">
+		<%= link_to 'Back to calendar', :controller => :teaching, :action => :studentzone %>
+		</span>
+    	</p>
+
+	</fieldset>
+<% end %>

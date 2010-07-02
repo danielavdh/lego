@@ -1,0 +1,24 @@
+<div id="studentsTitle">
+	<h3 class="flexi120">
+		<!-- <span style="color: #006633; padding-right:10%;"><%#=flash[:notice]%></span> -->
+		<%= I18n.t("teaching.students.title") %>
+	</h3>
+</div>
+
+	<table id="student_table">
+
+		<%= render :partial => 'displayed_students' %>
+
+	</table>
+
+	<div id="mediaBlanket"
+		 style="display:none;">
+	</div>
+
+	<div id="audio_area">
+		<% if @error_version == true %>
+			<%= render :partial => 'upload_audio' %>
+		<% end %>
+	</div>
+	<div id="video_area">
+	</div>

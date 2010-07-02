@@ -1,0 +1,35 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr class="title_row">
+	<th>language</th>
+	<th>display</th>
+	<th>publish_date</th>
+    <th>concert_date</th>
+    <th>publisher</th>
+	<th>author</th>
+    <th>venue</th>
+    <th>artists</th>
+    <th>content</th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td><%=h article.language %></td>
+    <td><%=h article.display %></td>
+    <td><%=h article.concert_date %></td>
+	<td><%=h truncate(article.publisher, :length => 15) %></td>
+    <td><%=h article.author %></td>
+    <td><%=h article.venue %></td>
+    <td><%=h article.artists %></td>
+    <td><%=h truncate(article.content, :length => 30) %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New article', new_article_path %>

@@ -1,0 +1,18 @@
+<% if controller_name == "playing" && action_name == "high_res_photos" -%>
+	<% variable = @photo -%>
+<% else -%>
+	<% variable = nil -%>
+<% end -%>
+<% session[:sudo_id] || session[:user_id] || session[:friend_id] || session[:guest_id] || session[:student_id] ? log = "LOGOUT" : log = "LOGIN" -%>
+
+<div id="lang_log">
+	<div id="lang_link">
+   <%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :variable => variable}, :class => "login_links" %><span class="login_links"> | </span>
+   <%= link_to "DE", {:controller => controller_name, :action => action_name, :locale => 'de', :variable => variable}, :class => "login_links" %><span class="login_links"> | </span>
+   <%= link_to "PY", {:controller => controller_name, :action => action_name, :locale => 'py', :variable => variable}, :class => "login_links" %>
+	</div>
+	<div id="login_link">
+   <%= link_to log, {:controller => :admins, :action => log.downcase } , 
+					 :class => "login_links", :method => :get %>
+	</div>
+</div>

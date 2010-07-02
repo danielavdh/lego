@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="author" content="http://wwwebsites.com" />
+  <meta name="copyright" content="2009, Daniela van der Heijden" />
+  <meta name="description" content='cello' />
+  <meta name="keywords" content='cello' />
+  <title>Leonid Gorokhov, performing</title>
+  <%= stylesheet_link_tag 'playing' %>
+  <%= javascript_include_tag :defaults, 'browser_detect', 'swfobject' %>
+</head>
+<body onload="leonid.page.resizeText(); leonid.links.show_page('<%=action_name%>', '#bbaca3');" 
+	  onresize="leonid.page.resizeText();"><!-- #3b2929  -->
+	
+	<% action_name == "index" ? actionName = "playing" : actionName = action_name -%>
+
+	<% if action_name=="bio"  || action_name=="recordings" || action_name=="photos" || action_name=="chambermusic" -%>
+	<img id="<%= actionName %>_bkg_img"
+		 src="/images/playing/<%= actionName %>.jpg" />
+
+	<div id="<%= actionName %>_bar">
+	</div>
+	<% end -%>
+
+	<%= yield -%>
+
+	<%= render :partial => 'shared/lang_log' %>
+	<%= render :partial => 'shared/nav_playing' %>
+
+
+</body>
+</html>

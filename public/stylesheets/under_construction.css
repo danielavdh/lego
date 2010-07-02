@@ -1,0 +1,20 @@
+body {
+background-color: #ffffff;
+font-size: 0.85em;
+}
+div#page{
+height: 700px;
+background: url(/images/welcome/cello.jpg) no-repeat top center;
+}
+div#lang_log{
+width: 1024px;
+height: 20px;
+font-size: 8pt;
+text-align: left;
+padding-top: 3px;
+padding-left: 6px;
+color: #000000;
+}
+p{
+margin-top: 170px;
+}

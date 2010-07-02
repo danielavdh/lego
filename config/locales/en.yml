@@ -1,0 +1,411 @@
+en:
+  homepage:
+    info: "Hi Leonid (and Larissa?),<br />These are the main aspects of a web page:<br />Structure, content, presentation and behaviour.<br />You need to think about what you want to put on your site and then you should imagine what it should look like.<br />I put the most simple of navigation bars on the left to help you start the process."
+    update: "3 sep 09<br />there are 2 versions of homepage now, one light, one dark, one with drawings, one with photos. please consider all pics placeholders, unless you have explicitly approved or provided them!"
+    update2: "4 sep 09<br />added more linking pages, 2 groups (playing and teaching). there can be more, less, and obviously different ones from what is there now<br /><em>should it load in German when accessed from Germany?</em>"
+    update3: "5 sep 09<br />Is Ksenia willing to do some drawing?"
+    update4: "7 sep 09<br />Am busy with a new idea?"
+    update5: "8 sep 09<br />(homepage bridge) Think it looks too much like you are building instruments."
+    update6: "11 sep 09<br />(homepage thumb position) The photo could still be a lot better..."
+    update7: "13 sep 09<br />(link playing/diary) Same true here, obviously don't want to invest loads of time perfecting the quality of a picture that may never get used.<br />Will it be ok to use these paintings? It would be fabulous!<br />Also not clear what will be in the navigation bar, so do not take that too seriously either..<br />As is true for any content, which is of course up to you"
+    update8: "1 oct 09<br /><br /><ul>How to set lessons in <a href='/teaching/studentzone' class='welcome_msgs'>studentzone</a>:
+                        <li>Leonid: click date in calendar to set lesson times</li>
+                        <li>Leonid: click lesson times in calendar (green or red) to remove a lesson</li>
+                        <li>Leonid: cancelling a booked lesson sends a cancellation email to the student</li>
+                        <li>Leonid: how to <a href='/welcome/messages?locale=de' class='welcome_msgs'>add students</a></li></ul><br />
+                        <ul>How to book lessons in <a href='/teaching/studentzone' class='welcome_msgs'>studentzone</a>:
+                        <li>Student: click a (green) time to book a lesson</li>
+                        <li>Student: booking sends an email to Leonid and to student to confirm booking</li>
+                        <li>Student: click a (red) time to cancel a lesson (they can only cancel their own lessons)</li>
+                        <li>Student: Cancelling will send a cancellation email to Leonid</li></ul><br />
+                        <ul><li>Question: limits to booking and limits to cancelling?</li>
+                        <li><span style='color:red;'>!!!!</span> iCal will only display the correct lesson time if - EITHER -</li>
+                        <li>iCal/preferences/advanced/timezone support is turned off AND your computer is set to German time - OR -</li>
+                        <li>iCal/preferences/advanced/timezone support is turned on and Central European Time selected. Your computer can be set to anywhere.</li></ul>"
+    update9: "1 may 10<br /><br /><ul>How to <a href='/projects/' class='welcome_msgs'>add project</a> that will appear as current project in \"biography\":
+                        <li>Larissa: Click \"add project\" (above or in menu) and follow instructions</li></ul"
+  general:
+    close: "close"
+  playing:
+    index:
+      title_marti: "The Painter Hans Jakob Marti"
+      marti_img_title: "Painting by Hans Jakob Marti"
+      img_text1: "<p class='flexi100'><b>Berlin Philharmonic Orchestra conducted by Yehudi Menuhin</b></p>
+                  <p class='flexi100'><em>Tchaikovsky Rococo Variations</em></p>
+                  <p class='flexi80'>“...the interpretation of Tchaikovsky’s Rococo Variations marked the highlight of the evening. This was mainly due to the Russian cellist, Leonid Gorokhov, 
+                        who seized the various temperaments of the piece with a soft but powerful tone, and formed sensual, beautiful lines. He performed the nearly unplayable virtuoso passages with such dancing lightness. 
+                        It was as though they were pretty little etudes for a warm-up. Fantastic...”</p>
+                  <p class='flexi80'><em>Berliner Zeitung</em></p>"
+      img_text2: "<p class='flexi80'>“Russian-born London-based cellist Leonid  Gorokhov, the winner of several major competitions while still in his teens, has a sound that matches his personality – big, warm and generous.”</p>
+                  <p class='flexi80'><em>Jeremy Nicholas: Classic CD</em></p>"
+      img_text3: "<p class='flexi100'><b>English Symphony Orchestra conducted by Yehudi Menuhin</b></p>
+                  <p class='flexi100'><em>Schumann Cello Concerto</em></p>
+                  <p class='flexi80'>“The discovery of the evening however remains the 27 year old cellist Leonid Gorokhov...his technical performance, 
+                        his vibrating intonation and the velvet gloss of his bowing reminds one of the tone of the young Menuhin.”</p>
+                  <p class='flexi80'><em>Neue Ruhrzeitung</em></p>"
+      img_text4: "<p class='flexi100'><b>Biel Bienne Symphonieorchester</b></p>
+                  <p class='flexi100'><em>Dvorak Cello Concerto</em></p>
+                  <p class='flexi80'>“...Technically immaculate, dramatically virtuosic, soulful in phrasing and burningly expressive in the more poetical sections of the piece. 
+                        With this Dvorak and also with the Bach encore Gorokhov secures a place amongst the foremost cellists of his generation.”</p>
+                  <p class='flexi80'><em>Der Bund</em></p>"
+      bio_marti: "<p class='flexi80'>My name is Hans Jakob Marti and I live in Biel, Switzerland, where I have been running a medical practice for over 30 years. 
+                        In 1986 I had the pleasure of meeting the Russian master cellist Leonid Gorokhov who had come to our town to give a concert - a side effect of his participating in the Geneve Concours.</p>
+                  <p class='flexi80'>Luckily this was not our last meeting: The deep impression Leonid’s play left on myself and my wife, led to us going to many more concerts, 
+                        to the acquaintance developing into friendship, and over time to a growing urge on my part to express through painting my experience while listening to Leonid’s concerts.</p>
+                  <p class='flexi80'>This is how in 24 years of friendship, there grew a considerable, random and unplanned series of portraits, all showing Leonid in concert. 
+                        Credit for this series of paintings goes to what I consider a character inadequacy of myself: A “shaping rage” coming over me with overwhelming force 
+                        as soon as the first few sounds from Leonid’s cello are reaching my ears and draw me into a deep spell for the remainder of the concert.<br />
+                        Sound, rhythm, expression and movement shape in my head into pictures and when I get home after each concert I start to create paintings - 
+                        some small, some bigger, some from memory and some from sketches drawn during the performances.</p>
+                  <p class='flexi80'>I’d like to emphasise that the pictures “happen” on the spur of the moment. 
+                        They all attempt to revive the spontaneity and formidable authenticity of Leonid’s mature and masculine play, 
+                        exciting the listener with its lightness and subtlety as much as with its expressivity and its weight.</p>
+                  <p class='flexi80'>I don’t knowingly try to steer my creativity and hope that so I am able to catch into my paintings a small part of Leonid’s vast musicality and its expression 
+                        - a musician putting his art into practice, with joy, passion, commitment, motivation, love and confidence.<br />
+                        I am aware that it is impossible to paint music in a way that it would become “hearable”, nevertheless, 
+                        I believe that it is possible to visualise the feelings and emotions the music evokes in the musician and in the audience.</p>
+                  <p class='flexi80'><br />Hans Jakob Marti</p>"
+    diary:
+      title: "Here would be a good place to list your performance diary"
+    recordings:
+      leonid1: "Tchaikovsky+++Rococo Variations"
+      hst1: "Mozart+++Divertimento"
+      hst2: "???+++???"
+      special1: "Mendelssohn+++Octet"
+      special2: "???+++(Octet Encore)"
+    articles:
+      title: "This is the articles page"
+    photos:
+      title: "Click on framed photos for downloadable high resolution version"
+      imgTitleTag: "Click for high-resolution photo"
+      highResText: "Right-click (or controll-click on a mac) to save image to your computer"
+    bio:
+      title: "LEONID GOROKHOV - cello"
+      quote1: "<p class=\"flexi80\"><em>“I was bowled over when I first heard Leonid Gorokhov in a concert a few months ago.<br />With a sound reminiscent of the legendary Emanuel Feuermann, Gorokhov is one of those rare artists who combines a natural communicative skill with awesome technical command.”</em><br />Jeremy Nicholas, Classic FM Magazine</p>
+                <p class=\"flexi80\" style=\"margin-bottom:0px;\"><br />One of the finest cellists of his generation, Leonid Gorokhov often returns to his roots to perform in his home city of St. Petersburg.  
+                He studied at the St. Petersburg Conservatoire with Anatoli Nikitin and took part in masterclasses with Daniil Shafran.</p>"  
+      text: "<p class=\"flexi80\">Winner of Concertino Praga (First Prize) and Paris chamber music competition (Premier Grand Prix), Leonid Gorokhov is the only Russian cellist to be awarded the Grand Prix and the First Prize of the <a href='http://www.concoursgeneve.ch/' target='_blank' class='bio_text'>Geneva Concours (1986)</a>.  
+                In 1995 the European Association for Encouragement of the Arts awarded the Cultural Achievement Prize to Leonid Gorokhov for “exceptional talent and outstanding artistic accomplishment”.
+                Since 2008 Leonid Gorokhov is a Professor at the <a href='http://www.hmt-hannover.de/en/' target='_blank' class='bio_text'>Hochschule für Musik und Theater</a> in Hannover, Germany.</p>
+             <p class=\"flexi80\">In 1991 Leonid Gorokhov appeared as soloist with the St. Petersburg Philharmonic conducted by <a href='http://en.wikipedia.org/wiki/Yehudi_Menuhin' target='_blank' class='bio_text'>Lord Menuhin;</a> their strong musical rapport led to further concerto engagements with the Bergen, Berlin & Royal Philharmonic, English Symphony Orchestra, Sinfonia Varsovia and the Zurich Tonhalle.
+                In 1995 he made a triumphant return to Russia in performances of the Elgar Cello Concerto with the Philharmonia Hungarica, again conducted by Lord Menuhin.</p>
+             <p class=\"flexi80\">Recent engagements have included the Elgar concerto with the Royal Philharmonic Orchestra in the UK and with the Enescu Philharmonic in Bucharest; 
+                he performed the Walton Concerto with the Philharmonia Orchestra in the UK and in Russia he played Haydn in C with the St Petersburg Philharmonic, Dvorak Concerto with the Moscow State Symphony Orchestra and the D'Albert Cello Concerto with the St Petersburg Capella.</p>
+             <p class=\"flexi80\">Highlights of this season include chamber music at the Fort Macleod International Festival, Canada; 
+                performances at the Mozart Festival and the Schumann Festival at the Hannover Musik Hochschule; 
+                recital at the Imperial College, London and an evening of Bach Cello Suites, concerts with the <a href='http://www.proartist.co.uk/hermitage_string_trio.html' target='_blank' class='bio_text'>Hermitage String Trio</a> at the Chateau Port Royal, France, Hamburg Music Hochschule, Germany and Dart Festival, UK; 
+                masterclasses in Tarragona, Catalunya and Goslar, Germany.</p>
+             <p class=\"flexi80\">Apart from  his work as a soloist, Leonid Gorokhov is a founder member of the <a href='http://www.proartist.co.uk/hermitage_string_trio.html' target='_blank' class='bio_text'>Hermitage String Trio</a> (with Boris Garlitsky, violin, and <a href='http://www.classical-artists.com/users/profile.php?a=00000569' target='_blank' class='bio_text'>Alexander Zemtsov</a>, viola) and plays regularly as a duo with the pianists <a href='http://kathrynstott.com/' target='_blank' class='bio_text'>Kathryn Stott</a>, <a href='http://www.niklassivelov.com/' target='_blank' class='bio_text'>Niklas Sivelöv</a>, <a href='http://www.demidenko.net/' target='_blank' class='bio_text'>Nikolai Demidenko</a> and Gerard Wyss.
+                Duo and trio concerts have included the Båstad, Belfast, Eilat Winter, Oslo Chamber Music and Petworth Festivals, Munich and Wigmore Hall.
+                In Australia, his residence at the Townsville Festival found him playing a wide variety of chamber music; in Russia he performed \"Cello Dialogues\" with Alexander Rudin at the Moscow Philharmonia; 
+                at the Athens Megaron he played a cello-guitar recital with Elena Papandreou and at the Bargemusic New York he played chamber music with Mark Peskanov. 
+                He has appeared at many prestigious festivals such as Budapest Spring, Corinthian Summer, Davos, Evian, Gstaad, Harrogate, Interlaken, Kuhmo, Ljubljana, Munich, Schleswig-Holstein and Spoleto.</p>
+             <p class=\"flexi80\">Leonid Gorokhov undertakes regular recital tours of Japan and has played concertos with the Thailand Philharmonic and the Macau Chamber Orchestra.
+                In Europe he has been invited to play among others with the Basel, BBC Scottish, Berlin Radio, Biel-Bienne and Norrkoping Symphony Orchestras; the Prague Philharmonic, Promusica Salzburg and the Orchestre de la Suisse Romande.</p>
+             <p class=\"flexi80\">Leonid Gorokhov’s discography includes recordings of Boccherini, Debussy, Haydn, Kodaly, Martinu, Shostakovich, Tchaikovsky and Tortelier for Melodiya.
+                For Supraphon he has recorded concertos by Martinu and Saint-Saens with the Brno Philharmonic conducted by Lord Menuhin and an album of works by Prokofiev, Shostakovich, and Stravinsky.
+                Rarely performed gems feature on \"Russian Discoveries\" on the Olympia label and \"Virtuoso Cello Transcriptions\" on Cello Classics.
+                Leonid Gorokhov’s first recording with Nikolai Demidenko was an all-Schubert album for the Munich based AGPL label.
+                This was followed by a recording of Schnittke, Rachmaninov and Shostakovich Sonatas on ASV Gold.</p>
+             <p class=\"flexi80\"><br /><em>“I am delighted and thrilled to hear artistry of such superior order...”</em><br />(Bernhard Greenhouse)</p>"
+      projects:
+        current: "Current Projects"
+        concerts: "Upcoming Concerts"
+        concert: "Next Concert"
+        course: "Next Course"
+        masterclass: "Next Masterclass"
+    chambermusic:
+      title: "<a href='http://www.proartist.co.uk/hermitage_string_trio.html' target='_blank' class='bio_titleLink'>Hermitage String Trio</a>"
+      concerts: "Upcoming Concerts"
+      concert: "Next Concert"
+      quote1: "<p class=\"flexi80\"><em>\"True brilliance! This ensemble will do much to put more string trio repertory on the musical map.\"</em>  (The Strad)</p>
+                <p class=\"flexi80\" style=\"margin-bottom:0px;\"><br />In the short time since its foundation in 2004, the <a href='http://www.proartist.co.uk/hermitage_string_trio.html' target='_blank' class='bio_text'>The Hermitage String Trio</a> has established itself as an outstanding ensemble, undoubtedly one of the finest of its type. </p>"  
+      text: "<p class=\"flexi80\">With Boris Garlitsky, the distinguished violinist, joining founder members <a href='http://www.classical-artists.com/users/profile.php?a=00000569' target='_blank' class='bio_text'>Alexander Zemtsov</a>, principal viola of the London Philharmonic Orchestra, 
+                and cellist Leonid Gorokhov, professor of the <a href='http://www.hmt-hannover.de/en/' target='_blank' class='bio_text'>Hochschule für Musik und Theater</a> Hannover, who has a flourishing solo career, 
+                this European-based Russian trio looks forward to the future and to making a serious contribution to chamber music.</p>
+             <p class=\"flexi80\">An ensemble steeped in the renowned Russian tradition of string playing, their love of chamber music shines through in their programmes, 
+                which offer an enticing combination of lesser-known pieces and masterworks of the string trio repertoire. \"Hermitage\" comprises mature and accomplished artists, 
+                inspired and enriched by performing with some of the greatest, such as Yehudi Menuhin, Marta Argerich, Anne-Sofie Mutter and Gidon Kremer, amongst others.</p>
+             <p class=\"flexi80\">In autumn 2004 <a href='http://www.proartist.co.uk/hermitage_string_trio.html' target='_blank' class='bio_text'>The Hermitage String Trio</a> made their London début. 
+                They have performed since at the Wigmore Hall, the Sage, Gateshead, Dart Festival, Petworth 
+                and the Newbury Spring Festivals, Australian Festival of Chamber Music in Townsville 
+                and the Nice Academy Festival. Highlights of this season include performances at the Chateau Port Royal, France, 
+                return invitation to the Dart Festival and the concert at the Mendelssohn Saal of the Hamburg Musik Hochschule.</p>"
+  teaching:
+    index:
+      title: "General page about teaching"
+    courses:
+      title: "Courses"
+      click: "mouse click links to course site"
+      description1: "<p class=\"flexi80\">This year, courses for piano, violoncello, voice and vocal duo, as well as fortepiano and chamber music will be offered.</p>
+                    <p class=\"flexi80\"><b>Application Information</b><br />
+                        Deadline for registration is the 31st May, 2010.<br />
+                        To be admitted, applicants need to submit an audio recording to the relevant teachers (CD or upload - available on the site).<br />
+                        For the registration to become valid, the teacher needs to confirm that he has accepted an applicant.<br />
+                        Confirmation will be mailed no later than 15th June, 2010.<br />
+                        The minimum age for participants is 18 years, because no liability can be taken for younger participants.<br />
+                        The course fee is 450 € per individual participant, for vocal duos and groups (trios, quartets and quintets 900 € each).</p>
+                    <p class=\"flexi80\"><b>Further Important Information</b><br />
+                        Students can only participate after receipt of the course fee.<br />
+                        Participation in concert is subject to consultation with the professors.<br />
+                        The organisers cannot take responsibility for medical care, please make sure you check with your insurer that you are covered.<br />
+                        All participants are insured for liability by the organisers.<br />
+                        Course languages are German and English.<br />
+                        Minimum participants per course: 10 students.<br />
+                        Date of arrival is the 15th and departure on 29th August.</p>"
+      description2: "<p class=\"flexi80\"><b>Place</b><br />
+                        The courses will take place from 8th to 11th of July of 2010 in the Music Conservatory of Tarragona (Spain) carrer Cavallers, 10</p>
+                     <p class=\"flexi80\"><b>Conditions of participation</b><br /> 
+                        Students may attend the courses as active participants or listeners.
+                        Active students of instrument courses will have to audition. 
+                        These students are required to transfer 60€ (non-refundable) as a registration fee. 
+                        On being admitted they will be required to pay the remaining balance. 
+                        The students who fail the test will be considered listeners.</p>{{image2}}
+                     <p class=\"flexi80\">Listeners need not audition.</p>
+                     <p class=\"flexi80\"><b>Registration deadline</b><br />  
+                        21th of June 2010</p>
+                     <p class=\"flexi80\"><b>Other activities</b><br /> 
+                        Lectures, concerts and other events will take place during the Course. 
+                        Active participants – selected on the basis of their achievement during the Course - may take part in a public concert on the last day.</p>
+                     <p class=\"flexi80\">Free tickets will be available to students for the Course concerts.</p>"
+    classes:
+      title: "Masterclasses"
+    students:
+      title: "Students"
+    recordings:
+      title: "Some teaching videos would be great here."
+    blog:
+      title: "You could start a teaching blog:<br />How to play pianissimo? Like a fortissimo with very little bow etc etc"
+    studentzone:
+      login: "Student Login"
+      firstname: "Firstname"
+      lastname: "Lastname"
+      password: "Password"
+      submit: "Login"
+      back: "Back"
+      cancel_other: "You can't cancel somebody else's lesson"
+    contact:
+      germany: "Germany"
+  lessons:
+      start: "Lesson starting at "
+      hour: "h"
+      name: "Student name"
+      back_cal: "Back to calender"
+      book: "Book lesson"
+      cancel: "Cancel lesson"
+      email:
+        address: "Student email"
+        subject:
+          student_booked: "Lesson - booking confirmation"
+          leonid_cancelled: "Cancellation of lesson"
+          student_added: "{{name}} registered"
+        body:
+          greeting: "Dear"
+          student_booked: "This is an automated message to confirm your booking for a lesson with LG on"
+          at: "at"
+          leonid_sorry: "I am sorry that your lesson on"
+          leonid_cancel: "had to be cancelled. Please log into my calendar and book a new lesson on http://www.gorokhov.eu/teaching/studentzone/"
+          auto_msg: "This is an automated email message"
+          student_added_1: "You have been registered with http://www.leonidgorokhov.com"
+          student_added_2: "Click 'login' and then 'Student Login' to log in"
+          student_added_3: "Enter your firstname:"
+          student_added_4: "Enter your lastname:"
+          student_added_5: "Enter your password:"
+          student_added_6: "All your details are case-sensitive."
+          student_added_7: "Available lesson slots are green."
+          student_added_8: "To book a lesson, click on the lesson you would like, and then book. You will get a confirmation email and so will LG. The lesson slot in the calendar will turn red and should contain your name."
+          student_added_9: "If you need to cancel a lesson, click your booked lesson and cancel it. This will send a cancellation email to LG and the lesson will turn green again."
+          student_added_10: "The lesson booking system is the only part of this website that is public at the moment."
+          student_added_11: "Good luck and if you have a question, remarks, feedback or if something doesn't work the way you expect, please send an email to webmaster@gorokhov.eu"
+          student_added_12: "All the best,"
+  messages:
+      flash_login: "Invalid user/password combination"
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+      
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    # Used in date_select and datime_select.
+    order: [ :year, :month, :day ]
+ 
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_seconds:
+        one:   "less than 1 second"
+        other: "less than {{count}} seconds"
+      x_seconds:
+        one:   "1 second"
+        other: "{{count}} seconds"
+      less_than_x_minutes:
+        one:   "less than a minute"
+        other: "less than {{count}} minutes"
+      x_minutes:
+        one:   "1 minute"
+        other: "{{count}} minutes"
+      about_x_hours:
+        one:   "about 1 hour"
+        other: "about {{count}} hours"
+      x_days:
+        one:   "1 day"
+        other: "{{count}} days"
+      about_x_months:
+        one:   "about 1 month"
+        other: "about {{count}} months"
+      x_months:
+        one:   "1 month"
+        other: "{{count}} months"
+      about_x_years:
+        one:   "about 1 year"
+        other: "about {{count}} years"
+      over_x_years:
+        one:   "over 1 year"
+        other: "over {{count}} years"
+    prompts:
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Seconds"
+ 
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: "."
+      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ","
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u%n"
+        unit: "$"
+        # These three are to override number.format and are optional
+        separator: "."
+        delimiter: ","
+        precision: 2
+        
+    # Used in number_to_percentage()
+    percentage:
+      format:
+        # These three are to override number.format and are optional
+        # separator: 
+        delimiter: ""
+        # precision: 
+        
+    # Used in number_to_precision()
+    precision:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+        
+    # Used in number_to_human_size()
+    human:
+      format:
+        # These three are to override number.format and are optional
+        # separator: 
+        delimiter: ""
+        precision: 1
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+ 
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: ", and "
+      
+  activerecord:
+    errors:
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        inclusion: "is not included in the list"
+        exclusion: "is reserved"
+        invalid: "is invalid"
+        confirmation: "doesn't match confirmation"
+        accepted: "must be accepted"
+        empty: "can't be empty"
+        blank: "can't be blank"
+        too_long: "is too long (maximum is {{count}} characters)"
+        too_short: "is too short (minimum is {{count}} characters)"
+        wrong_length: "is the wrong length (should be {{count}} characters)"
+        taken: "has already been taken"
+        not_a_number: "is not a number"
+        greater_than: "must be greater than {{count}}"
+        greater_than_or_equal_to: "must be greater than or equal to {{count}}"
+        equal_to: "must be equal to {{count}}"
+        less_than: "must be less than {{count}}"
+        less_than_or_equal_to: "must be less than or equal to {{count}}"
+        odd: "must be odd"
+        even: "must be even"
+        only_pics: "only photos please"
+        pics_max_size: "this photo is too large"
+        only_mp3_audio: "only mp3 audio files please"
+        no_audio: "add an audio file please"
+        audio_size: "this audio file is too large"
+        title_and_composer: "only letters, numbers, spaces, \".\" or \",\" please"
+        # Append your own errors here or at the model/attributes scope.
+ 
+      # You can define own errors for models or model attributes.
+      # The values :model, :attribute and :value are always available for interpolation.
+      #
+      # For example,
+      #   models:
+      #     user:
+      #       blank: "This is a custom blank message for {{model}}: {{attribute}}"
+      #       attributes:
+      #         login:
+      #           blank: "This is a custom blank message for User login"
+      # Will define custom blank validation message for User model and 
+      # custom blank validation message for login attribute of User model.
+      #models:
+        
+    # Translate model names. Used in Model.human_name().
+    #models:
+      # For example,
+      #   user: "Dude"
+      # will translate User model name to "Dude"
+    
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    #attributes:
+      # For example,
+      #   user:
+      #     login: "Handle"
+      # will translate User attribute "login" as "Handle"

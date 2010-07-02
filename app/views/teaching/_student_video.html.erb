@@ -1,0 +1,40 @@
+<!-- <div id="audio_content">
+	<p><%= student.firstname + " " + student.lastname %></p>
+
+	<%#= button_to_remote I18n.t("general.close"), :url => {:action => 'stop_video',
+										   :div_id => 'video_area',  #check whether needed
+								  		   :id => student.id} %>
+	<div id="videoSWF">
+		<h5>alternative_content</h5>
+	</div>
+	
+</div> -->
+
+
+<div id="video_content">
+	
+	<% form_remote_tag :url => {:action => "play_video", :id => student.id, :swf => true}, :html => {:class => "downloadSpeed"} do -%>
+	
+	<p><%= @video_title %>
+		<span>&nbsp;&nbsp;internet connection speed<br />
+
+			<%= radio_button_tag 'size', "small", size=="small"?true:false, :onchange => "this.form.onsubmit();" %>slow
+			<%= radio_button_tag 'size', "medium", size=="medium"?true:false, :onchange => "this.form.onsubmit();" %>medium
+			<%= radio_button_tag 'size', "large", size=="large"?true:false, :onchange => "this.form.onsubmit();" %>fast
+
+		</span>
+	</p>
+
+	<% end %>
+
+	<!-- watch the button syntax, 2 curly braces around the url!!! -->
+	<%= button_to_remote I18n.t("general.close"), {:url => {:action => 'stop_video'}},
+									 			   :class => "closeVideoButton" %>
+	<div id="videoSWF">
+		<h5>alternative_content</h5>
+	</div>
+	
+</div>
+
+
+

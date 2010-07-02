@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+SEQUENCE:0
+URL:http://www.gorokhov.eu/teaching/studentzone
+PRIORITY:0
+ORGANIZER:Leonid Gorokhov
+DTEND;TZID=Europe/Berlin:20100218T120000
+UID:Laura van der Heijden uiditem 2010-02-18 10:00:00 UTC
+SUMMARY:Laura van der Heijden
+DESCRIPTION:11:00 Central European Time\, Laura van der Heijden
+DTSTART;TZID=Europe/Berlin:20100218T110000
+ATTENDEE:Laura van der Heijden
+CREATED:Fri Feb 19 11:24:04 +0100 2010
+DTSTAMP:112404
+LOCATION:Hannover
+END:VEVENT
+END:VCALENDAR

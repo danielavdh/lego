@@ -1,0 +1,104 @@
+<style type='text/css'>
+h3{color: white;}
+div#content_container{
+left: 0%;
+top: 21%;
+width: 62%;
+height: 75%;
+}
+div#content{
+padding: 0% 5%;
+}
+</style>
+<div id="bioTitle"><h3 class="flexi100"><%= I18n.t("playing.bio.title") %></h3>
+</div>
+
+<div id="content_container">
+	<div id="content">
+
+	<div id="quote1">
+	<%= I18n.t("playing.bio.quote1") %>
+	</div>
+	
+		<% unless @concerts.blank? && @course.blank? && @masterclass.blank? %>
+		<div id="current_projects">
+			<h3 class="flexi100"><%= I18n.t("playing.bio.projects.current") %></h3>
+
+			<% unless @concerts.blank? %>
+			<h4 class="flexi80"><%= @nextConcert %></h4>
+				<% @concerts.each do  |c| %>
+					<p class="flexi80">
+					   <a href="<%= c.line_4 %>"
+						  class="bio_text"
+					      target="_blank">
+					<%= c.start_date.to_date.to_s(:short) + " " + c.start_date.year.to_s %>, <%= c.line_1 %>
+					<% unless c.line_2.blank? %>
+					<br /><%= c.line_2 %>
+					<% end %>
+					<% unless c.line_3.blank? %>
+					<br /><%= c.line_3 %>
+					<% end %>
+					</a></p>
+				<% end %>
+			<% end %>
+
+			<% unless @course.blank? %>
+			<h4 class="flexi80"><%= I18n.t("playing.bio.projects.course") %></h4>
+				<p class="flexi80">
+					<a href="<%= url_for :controller => 'teaching', :action => 'courses' %>"
+					  class="bio_text"
+				      target="_self">
+				<%= @course.start_date.to_date.to_s(:short) %> - <%= @course.end_date.to_date.to_s(:short) + " " + @course.end_date.year.to_s %><br />
+				<%= @course.line_1 %>
+					<% unless @course.line_2.blank? %>
+					<br /><%= @course.line_2 %>
+					<% end %>
+					<% unless @course.line_3.blank? %>
+					<br /><%= @course.line_3 %>
+					<% end %>
+				</a></p>
+			<% end %>
+
+			<% unless @masterclass.blank? %>
+			<h4 class="flexi80"><%= I18n.t("playing.bio.projects.masterclass") %></h4>
+				<p class="flexi80">
+					<a href="<%= url_for :controller => 'teaching', :action => 'classes' %>"
+					  class="bio_text"
+				      target="_self">
+				<% if @masterclass.end_date.blank? %>
+					<%= @masterclass.start_date.to_date.to_s(:short) + " " + @masterclass.start_date.year.to_s %><br />
+				<% else %>
+					<%= @masterclass.start_date.to_date.to_s(:short) %> - <%= @masterclass.end_date.to_date.to_s(:short) + " " + @masterclass.end_date.year.to_s %><br />
+				<% end %>
+				<%= @masterclass.line_1 %>
+					<% unless @masterclass.line_2.blank? %>
+					<br /><%= @masterclass.line_2 %>
+					<% end %>
+					<% unless @masterclass.line_3.blank? %>
+					<br /><%= @masterclass.line_3 %>
+					<% end %>
+				</a></p>
+			<% end %>
+		</div>
+		<% end %>
+
+		<div id="content_text">
+		<%= I18n.t("playing.bio.text") %>
+		</div>
+
+	
+
+	</div>
+</div>
+<div id="scroller">
+	<img id="scroll_up"
+		 src="/images/playing/arrow_up.png" 
+		 alt="scroll up" 
+		 onmouseover="leonid.scrollText.move(1,-2,20,1)" 
+		 onmouseout="leonid.scrollText.move(0);" />
+	<img id="scroll_down"
+		 src="/images/playing/arrow_down.png" 
+	 	 alt="scroll down" 
+		 onmouseover="leonid.scrollText.move(1,2,20,1)" 
+		 onmouseout="leonid.scrollText.move(0);" />
+</div>

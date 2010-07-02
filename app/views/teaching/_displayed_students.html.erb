@@ -1,0 +1,83 @@
+<% for i in 0..@students.length-1 %>
+
+	<% if i%3==0 %>
+	<tr>
+	<% end %>
+
+	<td class="studentFields">
+		
+		<!-- admin hide student button -->
+
+		<% if @admin==true %>
+			<%= button_to_remote 'hide', {:url => {:action => 'hide_student',
+											   			  :id => @students[i].id,
+														  :student => {:displayed => 'none'}}},
+										 {:method => :post,
+										  :class => 'hideStudentButton'} %><br />
+		<% end %>
+		
+		<!-- student photo with link to student website -->
+
+		<% unless @students[i].web_location1.blank? %>
+			<a href="<%= @students[i].web_location1 %>"
+		   	   target="_blank">
+		<% end %>
+		<!-- <img src="/images/students/<%#= @students[i].pic_name %>" /> -->
+			<% unless @students[i].pic_data.blank? %>
+				<img src="<%= url_for(:controller => 'students', 
+									  :action => 'photo', 
+									  :id => @students[i].id) %>">
+			<% else %>
+				<img src="/images/students/cello.jpg" />
+			<% end %>
+		<% unless @students[i].web_location1.blank? %>
+			</a>
+		<% end %>
+
+		<!-- student name, country & teaching period -->
+
+		<b><%= @students[i].firstname %> <%= @students[i].lastname %></b><br />
+		<%= @students[i].address5 %><br />
+		<%= @students[i].student_period %><br />
+
+		<!-- upload mp3 files -->
+
+		<% if @admin==true || @logged_in_student.id==@students[i].id %>
+			<%= button_to_remote 'audio add' , {:url => {:action => 'upload_audio',
+											   			:id => @students[i].id}},
+											   {:class => 'cursorButton'} %>
+		<% end %>
+
+
+		<% unless @students[i].aud_titles.blank? %>
+
+		<!-- delete mp3 file -->
+
+			<% if (@admin==true || @logged_in_student.id==@students[i].id) %>
+				<%= button_to_remote 'remove' , {:url => {:action => 'remove_audio',
+												   		  :id => @students[i].id}},
+												{:class => 'cursorButton'} %>
+			<% end %>
+
+		<!-- student audio load link(s) -->
+
+			<br /><%= button_to_remote 'play audio' , {:url => {:action => 'play_audio',
+											   			  :id => @students[i].id}},
+											 		  {:class => 'cursorButton'} %>
+		<% end %>
+
+		<!-- student video load link -->
+
+		<% unless @students[i].vid_descr.blank? %>
+			<br /><%= button_to_remote 'play video', {:url => {:action => :play_video,
+										   	   			 	   :id => @students[i].id,
+															   :size => "medium"}},
+										 	   		 {:class => 'cursorButton'}%>
+		<% end %>
+	</td>
+
+	<% if i%3==2 %>
+	</tr>
+	<% end %>
+
+<% end %>

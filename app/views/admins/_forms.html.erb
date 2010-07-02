@@ -1,0 +1,28 @@
+<% form_for(@admin) do |f| %>
+  <%= f.error_messages %>
+
+	<fieldset class="admin_fieldset">
+		<legend class="admin_legend"><%= text %></legend>
+    	<p>
+    	  <%= f.label :name %><br />
+    	  <%= f.text_field :name, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :admin_password, 'Password' %>:<br />
+    	  <%= f.password_field :password, :size => 40, :class => 'input_form' %>
+    	</p>
+    	<p>
+    	  <%= f.label :admin_password_confirmation, 'Confirm' %>:<br />
+    	  <%= f.password_field :password_confirmation, :size => 40, :class => 'input_form' %>
+    	</p>
+    	
+		<p style="padding-left: 10px;">
+    	<%= f.submit link_text , :class => "submit_form" %>
+		<span style="padding-left: 100px;">
+		<%= link_to 'Back', admins_path, :class => 'admin_links'  %>
+		</span>
+    	</p>
+
+	</fieldset>
+
+<% end %>

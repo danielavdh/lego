@@ -1,0 +1,31 @@
+<h1>Listing lessons</h1>
+
+<table>
+  <tr class="title_row">
+	<th>Created at</th>
+    <th>Updated at</th>
+    <th>Name</th>
+	<th>Color</th>
+    <th>Start at</th>
+    <th>End at</th>
+  </tr>
+
+<% @lessons.each do |lesson| %>
+  <tr>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td><%=h lesson.created_at %></td>
+    <td><%=h lesson.updated_at %></td>
+	<td><%=h lesson.name %></td>
+    <td><%=h lesson.color %></td>
+    <td><%=h lesson.start_at %></td>
+    <td><%=h lesson.end_at %></td>
+    <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+    <td><%= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New lesson', new_lesson_path %>

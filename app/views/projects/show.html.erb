@@ -1,0 +1,50 @@
+<div  style="margin:20% 20%; text-align:left; color:white;">
+
+<p id="showLarissa" class="flexi80">
+	When this project will be displayed, that's what it will look like on biography page<br />
+	If it's an HST concert, it will also be displayed on trio page<br />
+	You can test the link now by clicking on the project description below<br /><br />  
+	<%= link_to 'Edit', edit_project_path(@project) %> |
+	<%= link_to 'Back', projects_path %>
+</p>
+	
+<div  style="width:38%; padding:1% 1% 2% 2%; background-color: #491802;border: 2px ridge #491802;">
+<p class="flexi80" style="color:#997070; padding-bottom:6px; margin-bottom:10px; border-bottom:2px ridge #491802;">other projects
+</p>
+
+<p class="flexi80">
+	<% if @project.event_type == "concert" || @project.event_type == "HST-concert"%>
+	<a href="<%= @project.line_4 %>"
+	   class="bio_text"
+	   target="_blank">
+	<% elsif @project.event_type == "course" %>
+	<a href="<%= url_for :controller => 'teaching', :action => 'courses' %>"
+	  class="bio_text"
+      target="_self">
+	<% elsif @project.event_type == "masterclass" %>
+	<a href="<%= url_for :controller => 'teaching', :action => 'classes' %>"
+	  class="bio_text"
+      target="_self">
+	<% end %>
+
+	<% if @project.end_date.blank? %>
+		<%= @project.start_date.to_date.to_s(:short) + " " + @project.start_date.year.to_s + ", " %>
+	<% else %>
+		<%= @project.start_date.to_date.to_s(:short) %> - <%= @project.end_date.to_date.to_s(:short) + " " + @project.end_date.year.to_s %><br />
+	<% end %>
+
+<%= @project.line_1 %>
+	<% unless @project.line_2.blank? %>
+	<br /><%= @project.line_2 %>
+	<% end %>
+	<% unless @project.line_3.blank? %>
+	<br /><%= @project.line_3 %>
+	<% end %>
+</a></p>
+
+<p class="flexi80" style="color:#997070; padding-top:6px; margin-top:10px; border-top:2px ridge #491802;">other projects
+</p>
+</div>
+
+
+</div>

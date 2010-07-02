@@ -1,0 +1,41 @@
+<p class="flexi100" style="margin-top:10%; color:white; background-color:#000066;">
+<%= flash[:not_your_lesson]%>
+</p>
+
+<div id="studentZoneCalendar"
+	 title="<%= @msg_to_leonid %>">
+
+<% if session[:user_id] || session[:student_id] %>
+<%= event_calendar %>
+	
+<% else %>
+
+	<% form_tag do %>
+	<fieldset class="login_fieldset">
+		<legend class="login_legend"><%= I18n.t("teaching.studentzone.login")%></legend>
+			<p>
+				<label for="firstname"><%= I18n.t("teaching.studentzone.firstname")%>:</label><br />
+				<%= text_field_tag :firstname, params[:firstname], :size => 40, :id => 'user_name', :class => 'input_login' %>
+			</p>
+			<p>
+				<label for="name"><%= I18n.t("teaching.studentzone.lastname")%>:</label><br />
+				<%= text_field_tag :lastname, params[:lastname], :size => 40, :class => 'input_login' %>
+			</p>
+			<p>
+				<label for="password"><%= I18n.t("teaching.studentzone.password")%>:</label><br />
+				<%= password_field_tag :password, params[:password], :size => 40, :class => 'input_login' %>
+			</p>
+			<p style="padding-top: 20px; padding-left: 1px;">
+				<%= submit_tag I18n.t("teaching.studentzone.submit"), :class => "submit_login" %>
+				<span style="padding-left: 100px;">
+				<%= link_to I18n.t("teaching.studentzone.back"), {:controller => "welcome", :action => "index"}, :class => 'admin_links'  %>
+				</span>
+			</p>
+	</fieldset>
+	<% end %>
+
+<p class="flash_notice"><%= flash[:notice] %></p>
+
+<% end %>
+
+</div>

@@ -1,0 +1,14 @@
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+
+<div class="articleDiv">
+	
+	<p style="color:green;">language: <%= @article.language %>, display: <%= @article.display %>
+	<h3><%= @article.publisher %><span class="publishSpan">, <%= @article.publish_date.to_date.to_formatted_s(:rfc822) if @article.publish_date %><%= @article.author %></span></h3>
+	<p><%= @article.artists %><%= ", " unless @article.venue.blank? %><%= @article.venue %></p>
+	<div class="articleContent"><%= @article.content %>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

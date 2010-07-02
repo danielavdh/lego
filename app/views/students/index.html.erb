@@ -1,0 +1,81 @@
+<div id="student_list">
+<h1>Listing students</h1>
+
+<%= link_to 'New student', new_student_path %> | 
+<%= link_to 'Back to calendar', :controller => :teaching, :action => :studentzone %> |
+<%= link_to 'Home', :controller => :welcome, :action => :index %>
+<br />
+<br />
+
+<table>
+  <tr class="title_row">
+	<th></th>
+    <th></th>
+	<th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>After 15.30h</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>Town/City</th>
+    <th>County</th>
+    <th>Country</th>
+    <th>Home Phone</th>
+    <th>Mobile Phone</th>
+    <th>Other Phone</th>
+    <th>Display</th>
+    <th>Web Address 1</th>
+    <th>Web Address 2</th>
+    <th>Birthdate</th>
+    <th>Student Period</th>
+    <th>AssetsPath</th>
+    <th>Photo name</th>
+    <th>Photo type</th>
+    <th>Photo data</th>
+    <th>Audio titles</th>
+    <th>Audio recDate</th>
+    <th>Video paths</th>
+    <th>Video descr</th>
+    <th></th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Show', student %></td>
+	<td><%=h student.firstname %></td>
+    <td><%=h student.lastname %></td>
+    <td><%=h student.email %></td>
+    <td><%=h student.after_school %></td>
+	<td><%=h student.address1 %></td>
+	<td><%=h student.address2 %></td>
+	<td><%=h student.address3 %></td>
+	<td><%=h student.address4 %></td>
+	<td><%=h student.address5 %></td>
+    <td><%=h student.phone1 %></td>
+    <td><%=h student.phone2 %></td>
+    <td><%=h student.phone3 %></td>
+    <td><%=h student.displayed %></td>
+    <td><%=h truncate(student.web_location1, :length => 10) %></td>
+    <td><%=h student.web_location2 %></td>
+    <td><%=h student.birth_date %></td>
+    <td><%=h student.student_period %></td>
+    <td><%=h student.assetsPath %></td>
+    <td><%=h student.pic_name %></td>
+    <td><%=h student.pic_type %></td>
+    <td><%=h truncate(student.pic_data, :length => 10) %></td>
+    <td><%=h truncate(student.aud_titles, :length => 10) %></td>
+    <td><%=h truncate(student.aud_recDate, :length => 10) %></td>
+    <td><%=h truncate(student.vid_paths, :length => 10) %></td>
+    <td><%=h student.vid_descr %></td>
+    <td><%= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= link_to 'New student', new_student_path %> | 
+<%= link_to 'Back to calendar', :controller => :teaching, :action => :studentzone %> |
+<%= link_to 'Home', :controller => :welcome, :action => :index %>
+
+</div>

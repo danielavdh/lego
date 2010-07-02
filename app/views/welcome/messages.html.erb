@@ -1,0 +1,68 @@
+<div id="navigation">
+	<ul class="navigation">
+		 <li><%=link_to "home", {:controller => :welcome,
+									  :action => :index},
+									  :class => "w_playing" %></li><br /><hr /><br />
+		 <li><%=link_to "PERFORMING", {:controller => :playing,
+									:action => :index},
+									:class => "w_playing" %></li>
+		 <li><%=link_to "biography", {:controller => :playing,
+									  :action => :bio},
+									  :class => "w_playing" %></li>
+		 <li><%=link_to "reviews", {:controller => :playing,
+									 :action => :reviews},
+									 :class => "w_playing" %></li>
+		 <li><%=link_to "photos", {:controller => :playing,
+								   :action => :photos},
+								   :class => "w_playing" %></li>
+		 <li><%=link_to "trio", {:controller => :playing,
+								  :action => :chambermusic},
+								  :class => "w_playing" %></li>
+		 <li><%=link_to "recordings", {:controller => :playing,
+									   :action => :recordings},
+									   :class => "w_playing" %>
+		 <li><%=link_to "contact", {:controller => :playing,
+									   :action => :contact},
+									   :class => "w_playing" %></li>
+   	 	 <li><%=link_to "add project", {:controller => :projects, 
+									 	:action => :index},
+										:id => "projects",
+									 	:class => "w_playing" %></li><br /><hr /><br />
+		 <li><%=link_to "TEACHING", 
+						{:controller => :teaching,
+						 :action => :index},
+						 :class => "w_teaching" %></li>
+		 <li><%=link_to "courses", {:controller => :teaching,
+									:action => :courses},
+									:class => "w_teaching" %></li>
+		 <li><%=link_to "masterclasses", {:controller => :teaching,
+									:action => :classes},
+									:class => "w_teaching" %></li>
+		 <li><%=link_to "videos", {:controller => :teaching,
+										   :action => :recordings},
+										   :class => "w_teaching" %></li>
+		 <li><%=link_to "students", {:controller => :teaching,
+									 :action => :students},
+									 :class => "w_teaching" %></li>
+		 <li><%=link_to "studentzone", {:controller => :teaching,
+								 		:action => :studentzone},
+								 		:class => "w_teaching" %></li>
+		 <li><%=link_to "contact", {:controller => :teaching,
+								 :action => :contact},
+								 :class => "w_teaching" %></li>
+		 <li><%=link_to "add students", {:controller => :students,
+								 		:action => :new},
+								 		:class => "w_teaching" %></li>
+	</ul>
+</div>
+
+
+<div class="info"><%= I18n.t("homepage.update9") %></div>
+<div class="info"><%= I18n.t("homepage.update8") %></div>
+<div class="info"><%= I18n.t("homepage.update7") %></div>
+<div class="info"><%= I18n.t("homepage.update6") %></div>
+<div class="info"><%= I18n.t("homepage.update5") %></div>
+<div class="info"><%= I18n.t("homepage.update3") %></div>
+<div class="info"><%= I18n.t("homepage.update2") %></div>
+<div class="info"><%= I18n.t("homepage.update") %></div>
+<div class="info"><%= I18n.t("homepage.info") %></div>

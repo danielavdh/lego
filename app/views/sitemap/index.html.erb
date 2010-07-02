@@ -1,0 +1,44 @@
+<style type="text/css">
+ul.sitemap span{
+font-size: 16px;
+line-height: 30px;
+margin-left: -18px;
+text-decoration: underline;
+}
+ul.sitemap a, a:link, a:visited, a:hover{
+text-decoration: none;
+color: #000099;
+}
+ul.sitemap a:hover{
+text-decoration: none;
+color: #6666ff;
+}
+h3 a, a:link, a:visited{
+color: black;
+}
+h3 a:hover{
+color: #999999;
+}
+</style>
+
+<h3>sitemap <%= link_to "Leonid Gorokhov", root_path %></h3> 
+    <ul class="sitemap"><span>teaching:</span>
+	<%  for i in 0..@teaching.length-1 %>
+	  <li>
+      <% @teaching[i].each do |action| %>
+            <%= link_to url_for(:controller => :teaching, :action => action).to_s, :controller => :teaching, :action => action %>
+      <% end %>
+	  </li>
+    <% end %>
+	</ul>
+    <ul class="sitemap"><span>performing:</span>
+	<%  for i in 0..@playing.length-1 %>
+	  <li>
+      <% @playing[i].each do |action| %>
+            <%= link_to url_for(:controller => :playing, :action => action).to_s, :controller => :playing, :action => action %>
+      <% end %>
+	  </li>
+    <% end %>
+	</ul>
+	
+	

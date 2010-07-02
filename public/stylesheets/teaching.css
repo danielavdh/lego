@@ -1,0 +1,361 @@
+body {
+font-family: "Trebuchet MS", "Microsoft Sans Serif", sans-serif;
+background-color: #dddddd;
+text-align: center;
+font-size: 100%;
+}
+a, a:link, a:visited, a:hover {color:#000000; text-decoration: none; margin: 0; padding: 0; border: none;}
+a:hover{color:#999999;}
+body, img, div, h3, h4, p, td, ul, li {margin:0; border:none; padding:0;}
+h3, h4{font-weight: normal;}
+
+/********************************* LANGUAGES AND LOGIN/OUT *************************************/
+
+div#lang_log{
+position: absolute;
+left: 0%;
+top: 2px;
+width: 100%;
+height: 3%;
+text-align: left;
+vertical-align: top;
+}
+#lang_link{
+position: absolute;
+top: 0%;
+left: 3%;
+}
+#login_link{
+position: absolute;
+right: 3%;
+top: 0%;
+}
+.login_links, .login_links:link, .login_links:visited{
+vertical-align: top;
+font-style: normal;
+}
+.login_links:hover{
+}
+table#navigation{
+position: absolute;
+left: 0%;
+top: 3%;
+width: 100%;
+height: 9%;
+border-collapse: collapse;
+text-align: center;
+background-color: #bcbccc;
+}
+table#navigation td{
+width: 10%;
+}
+table#navigation td#home{
+width: 10%;
+padding-left: 2.8%;
+text-align: left;
+}
+table#navigation td#lastCell{
+width: 5%;
+}
+table#navigation a:link, table#navigation a:visited{
+font-style: normal;
+color:#000066;
+} 
+table#navigation a:hover{
+color:#444499;
+} 
+
+/********************************* INDEX *************************************/
+
+div#indexTitle{
+position: absolute;
+top: 16%;
+width: 100%;
+text-align: center;
+}
+div#indexTitle h3{
+margin: 0%;
+}
+
+/********************************* COURSES *************************************/
+
+div#coursesTitle h3{
+margin: 11% 0% 2%;
+text-align: left;
+padding-left: 3%;
+}
+div.coursesFields{
+padding: 3% 0% 3% 3%;
+cursor: pointer;
+border-top: 3px ridge #d0d0d0;
+}
+img.course_link, img.course_link2{
+width: 45%;
+float: right;
+margin: 1% 2% 2% 3%;
+border: 3px ridge #d0d0d0;
+}
+img.course_link2{
+width: 21%;
+margin: 2% 2% 2% 0%;
+float: left;
+}
+div.course_description{
+text-align: left;
+margin: 0%
+}
+div.course_description p{
+margin: 1% 0% 0% 0%;
+}
+
+/********************************* CLASSES *************************************/
+
+div.classesDiv{
+text-align: left;
+margin: 2% 0% 2% 3%;
+}
+div.classesDiv h3{
+margin-bottom: 5px;
+}
+img#flyer1{
+float:left;
+padding: 2% 2% 2% 0.3%
+}
+div#contentCourse1{
+float: right;
+width: 50%;
+margin: 4% 4% 0% 0%;
+}
+span.locationSpan{
+font-weight: normal;
+font-size: 0.8em;
+}
+div.classesContent{
+}
+div.classesContent p{
+margin-top: 1%
+}
+
+/********************************* STUDENTS *************************************/
+
+div#studentsTitle{
+text-align: center;
+margin: 11% 0% 0% 0%;
+padding: 0%;
+}
+table#student_table{
+width: 98%;  /*999px*/
+margin-left: 2%;
+/*margin-left: auto;
+margin-right: auto;*/
+}
+td.studentFields{
+position: relative;
+width: 31%; /*313px;*/
+padding: 1%; /*10px;*/
+text-align: left;
+vertical-align: middle;
+}
+td.studentFields img{
+width: 40%;
+float: left;
+border: 2px ridge #cccccc;
+margin-right: 3%; /*10px;*/
+}
+.hideStudentButton{
+position: relative;
+top: 30px;
+}
+.cursorButton, .hideStudentButton{
+cursor: pointer;
+}
+div#mediaBlanket{
+position: fixed;
+left: 0%; /*for IE*/
+top: 0%;
+text-align: center;
+width: 100%;
+height: 100%;
+background-color: #000020;
+}
+div#video_area, div#audio_area{
+position: fixed;
+top: 15%;
+left: 50%;
+margin-left: -330px;
+}
+div#audio_area{
+top: 190px;
+margin-left: -250px;
+}
+div#video_content{
+background-color: #03132f;
+padding: 35px 0px 0px 0px;
+border: 2px ridge #383838;
+}
+div#video_content p{
+position: absolute;
+left: 35px;
+width: 540px;
+top: 9px;
+color: white;
+text-align: left;
+font-style: normal;
+}
+div#video_content span{
+float: right;
+color: white;
+font-size: 0.5em;
+margin-top: -3px;
+}
+input.closeVideoButton{
+position: absolute;
+top: 6px;
+right: 10px;
+cursor: pointer;
+}
+div#audio_content input, div#audio_content p{
+position: absolute;
+top: 20px;
+right: 20px;
+}
+div#audio_content{
+background-color: #03132f;
+padding: 35px 0px 0px 0px;
+border: 2px ridge #cccccc;
+}
+div#audio_content input{
+top: 8px;
+}
+div#audio_content p{
+color: white;
+top: 10px;
+left: 0px;
+}
+div#audio_upload, div#audio_remove{
+width: 550px;
+color: white;
+background-color: #03132f;
+padding: 35px 0px 0px 0px;
+border: 2px ridge #cccccc;
+}
+div#audio_upload{
+height: 410px;
+}
+span#close_btn{
+float: right;
+padding-right: 20px;
+margin-left: -50px;
+}
+div#audio_upload_form{
+color: black;
+background-color: #dddddd;
+margin: 30px 50px;
+padding: 10px 0px;
+}
+div#audio_upload_form p, div#audio_upload_form div{
+color: black;
+text-align: left;
+font-size: 9pt;
+padding: 10px 20px;
+}
+p.remove_audio_name{
+text-align: left;
+padding-left: 43px;
+margin: 10px 0px -10px 0px;
+}
+p.cache_note{
+text-align: left;
+color: #bbbbbb;
+font-size: 0.5em;
+padding-left: 10px;
+margin-top: -30px;
+}
+ul.remove_audio{
+text-align: left;
+padding: 30px 60px;
+}
+ul.remove_audio li{
+color: white;
+padding: 10px 0px;
+}
+ul.remove_audio span{
+padding-left: 20px;
+}
+
+/********************************* STUDENTZONE *************************************/
+
+div#studentZoneCalendar{
+text-align: center;
+background-color: #dddddd;
+/*margin-top: 30px;*/
+}
+
+/********************************* LOGIN *************************************/
+
+p.flash_notice{
+margin: 10px 250px 0px -250px;
+color: #006633;
+}
+fieldset.login_fieldset{
+margin: 0px 150px;
+width: 500px;
+padding: 20px;
+border: 3px solid #4444ff;
+text-align: left;
+}
+legend.login_legend{
+padding: 5px;
+font-size: 16pt;
+color: #4444ff;
+}
+form{
+font-size: 12pt;
+color: #0066cc;
+}
+label{
+padding-left: 5px;
+color: #4444ff;
+}
+.input_login{
+font-size: 10pt;
+color: black;
+background-color: #eeeeee;
+}
+.submit_login{
+width: 100px;
+font-size: 14pt;
+font-weight: bold;
+color: #4444ff;
+cursor:pointer;
+}
+a.admin_links:link{
+padding-left: 12px;
+padding-right: 20px;
+font-size: 14pt;
+color: #4444ff;
+}
+a.admin_links:visited{
+color: #4444ff;
+}
+a.admin_links:hover{
+color: #8888ff;
+}
+
+/********************************* CONTACT *************************************/
+
+img#contact_image{
+width: 73%;
+padding: 12% 0% 5%;
+}
+div#contact_text p{
+font-style: normal;
+line-height: 160%;
+}
+div#contact_text a:link, div#contact_text a:visited{
+color: #333333;
+font-style: italic;
+}
+div#contact_text a:hover{
+color: #999999;
+}

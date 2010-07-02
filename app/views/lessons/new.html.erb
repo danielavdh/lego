@@ -1,0 +1,20 @@
+<% hours = "<option selected='selected'>hrs</option><option>09</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option>" %>
+<% minutes = "<option selected='selected'>mins</option><option>00</option><option>15</option><option>30</option><option>45</option>"%>
+<br /><br />
+<h1>Lessons for <%= @date %></h1>
+
+
+<% form_for :lessons, :url => { :action => :create, :day => @day, :month => @month, :year => @year }, :html => {:class => "lessons_form"} do |f| %>
+
+<% for i in 0..9 %>
+
+<h3 id="lesson<%=i.to_s%>">
+	<span class="lessons_text">Lesson at:</span>
+	<%= select_tag "hour"+i.to_s, hours, :class => "lessons_select" %> <%= select_tag "min"+i.to_s, minutes, :class => "lessons_select" %></h3>
+
+<% end %>
+
+<%= button_to_function "Show more lessons", "leonid.admin.showNextLesson();"%>
+<%= f.submit "Add lessons to calendar (or Back to calendar)" , :class => "submit_form" %>
+
+<% end %>

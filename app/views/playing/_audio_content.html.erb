@@ -1,0 +1,12 @@
+<div id="audio_content">
+	<p class="flexi100"><%= leonid.firstname + " " + leonid.lastname %></p>
+
+	<%= button_to_remote I18n.t("general.close"), :url => {:action => 'stop_audio'} %>
+	<div id="audioSWF">
+		<h5>alternative_content</h5>
+	</div>
+	
+</div>
+
+
+

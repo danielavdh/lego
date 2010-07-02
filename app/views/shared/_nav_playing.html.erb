@@ -1,0 +1,58 @@
+<!-- the link ids have to be identical with the link actions for bkg-color -->
+
+<table id="navigation">
+	<tr>
+		<td id="home" 
+			class="flexi80"><%=link_to "home", {:controller => :welcome,
+													  :action => :index},
+													  :class => "home_link" %><br />
+						   <%=link_to "teaching", {:controller => :teaching,
+													  :action => :index},
+													  :class => "teaching_links" %>
+		</td>
+		<td id="index" 
+			class="flexi80"><%=link_to "performing", {:controller => :playing,
+													  :action => :index},
+													  :class => "playing_links" %>
+		</td>
+		<td id="bio" 
+			class="flexi80"><%=link_to "biography", {:controller => :playing,
+									  				 :action => :bio},
+									  				 :class => "playing_links" %>
+		</td>
+		<td id="reviews" 
+			class="flexi80"><%=link_to "reviews", {:controller => :playing,
+									 			   :action => :reviews},
+								 	 			   :class => "playing_links" %>
+		</td>
+		<td id="photos" 
+			class="flexi80"><%=link_to "photos", {:controller => :playing,
+								   				  :action => :photos},
+								   				  :class => "playing_links" %>
+		</td>
+		<td id="chambermusic" 
+			class="flexi80"><%=link_to "trio", {:controller => :playing,
+								  				:action => :chambermusic},
+								  				:class => "playing_links" %>
+		</td>
+		<td id="recordings" 
+			class="flexi80"><%=link_to "recordings", {:controller => :playing,
+									   				  :action => :recordings},
+									   				  :class => "playing_links" %>
+		</td>
+		<td id="contact" 
+			class="flexi80"><%=link_to "contact", {:controller => :playing,
+									  			   :action => :contact},
+									  			   :class => "playing_links" %>
+		</td>
+	   <% if session[:user_id] %>
+		<td id="projects" 
+			 class="flexi80"><%=link_to "add project", {:controller => :projects, 
+									 				   :action => :index},
+									 				   :class => "playing_links" %>
+		</td>
+	   <% end %>
+		<td id="lastCell"
+			class="flexi80">&nbsp;</td>
+	</tr>
+</table>

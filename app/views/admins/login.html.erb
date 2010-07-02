@@ -1,0 +1,22 @@
+<% form_tag do %>
+<fieldset class="login_fieldset">
+	<legend class="login_legend">Admin Login</legend>
+		<p>
+			<label for="name">Name:</label><br />
+			<%= text_field_tag :name, params[:name], :size => 40, :id => 'user_name', :class => 'input_login' %>
+		</p>
+		<p>
+			<label for="password">Password:</label><br />
+			<%= password_field_tag :password, params[:password], :size => 40, :class => 'input_login' %>
+		</p>
+		<p style="padding-top: 20px; padding-left: 1px;">
+			<%= submit_tag "Login", :class => "submit_login" %>
+			<span style="padding-left: 100px;">
+			<%= link_to 'Back', {:controller => "welcome", :action => "index"}, :class => 'admin_links'  %>
+			</span>
+		</p>
+</fieldset>
+<% end %>
+
+<%= button_to I18n.t("teaching.studentzone.login"), {:controller => :teaching, :action => :studentzone}, :id => "student_button", :method => :get%>
+

@@ -1,0 +1,51 @@
+<div id="audio_upload">
+
+	<p><%= @student.firstname + " " + @student.lastname %>
+		<span id="close_btn">
+	    <%= button_to_remote I18n.t("general.close"), :url => {:action => 'close_window',
+										       :div_id => 'audio_area'} %>
+		</span>
+	</p>
+	
+	<div id="audio_upload_form">
+		
+<% form_for(@student, :url => {:action => :upload_mp3,
+					  :id => @student.id},
+ 					  :html =>  {:multipart => true}) do |f| %>
+	<!-- remote forms don't work for file upload -->
+	<%# remote_form_for(@student, :html =>  {:multipart => true},
+								  :url => {:action => 'upload_mp3',
+								 		  :id => @student.id}) do |f| %>
+	
+	<div>
+		<%= f.text_field :composer %> <%= f.label :composer, "name of composer" %><br />
+		<%= error_message_on :student, :composer %>
+	</div>
+	<div>
+		<%= f.text_field :piece %> <%= f.label :piece, "title of piece" %><br />
+		<%= error_message_on :student, :piece %>
+	</div>
+	<div>
+		<%= f.date_select(:recording_date, :order => [:day, :month, :year]) %> <%= f.label :recording_date, "recording date" %>
+	</div>
+<br />
+	<p>Choose an audio file to upload. It has to be of the type .mp3!<br />
+		Please note: audio files are large, the upload takes time!
+	</p>
+
+	<div>
+		<%= f.file_field :audio, :id => "aud_upload", :accept => 'audio/mp3' %>
+		<span style="padding-left:20px;"><%= button_to_function 'Reset', "document.getElementById('aud_upload').value = '';", :class => 'cursorButton' %></span><br />
+		<%= error_message_on :student, :audio %>
+	</div>
+	
+	<p>
+		<%= f.submit 'Upload', :class => 'cursorButton' %>&nbsp;maximum size 10MB
+		
+	</p>
+
+		<% end %>
+		
+	</div>
+	
+</div>

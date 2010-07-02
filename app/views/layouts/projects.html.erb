@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="author" content="http://wwwebsites.com" />
+  <meta name="copyright" content="2009, Daniela van der Heijden" />
+  <meta name="description" content='cello' />
+  <meta name="keywords" content='cello' />
+  <title>Leonid Gorokhov</title>
+  <%= stylesheet_link_tag 'playing' %>
+  <%= javascript_include_tag :defaults, 'browser_detect', 'swfobject' %>
+  <style type="text/css">
+   /* body{background-color:#dddddd;}
+    h3{color: #000000;}
+    div#navigation, div#bodyNavigationStrip{background-color: #ccc6c6;}*/
+  </style>
+</head>
+<body onload="leonid.page.resizeText(); leonid.links.show_page('projects', '#bbaca3');" onresize="leonid.page.resizeText();">
+
+	
+	<%= render :partial => 'shared/lang_log' %>
+	<%= render :partial => 'shared/nav_playing' %>
+
+	<%= yield %>
+
+</body>
+</html>
+
