@@ -63,6 +63,7 @@ class PlayingController < ApplicationController
       size=="small" ? video_data = (params[:video].split('.')[0] + ".3gp") : video_data = params[:video]
       title, screenRatio, composer, piece = get_library_info(video_data.split('.')[0])
       #returns: title, screenRatio, composer, piece
+      @video_title = title
       render :update do |page|
         if params[:swf]
           page.call 'leonid.movies.unloadVideoPlayer'
