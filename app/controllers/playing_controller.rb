@@ -126,7 +126,11 @@ class PlayingController < ApplicationController
   def get_library_info(video)
     video_info = video_library
     #puts video_info[:leonid1][:recDate].to_s(:long)
-    title =  video_info[video.to_sym][:title]
+    if video_info[video.to_sym][:with]
+      title = video_info[video.to_sym][:title] + ", " + video_info[video.to_sym][:with]
+    else
+      title =  video_info[video.to_sym][:title]
+    end
     screenRatio = video_info[video.to_sym][:screenRatio]
     composer = video_info[video.to_sym][:composer]
     piece = video_info[video.to_sym][:piece]
