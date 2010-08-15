@@ -43,7 +43,7 @@ class TeachingController < ApplicationController
   def blog
   end
 
-  #def studentzone
+  def studentzone
   #  if session[:user_id]
   #    @msg_to_leonid = "Hi Leonid, click on a day number to set lessons for that day"
   #  end
@@ -62,7 +62,7 @@ class TeachingController < ApplicationController
   #    after_school = Student.find_by_id(session[:student_id]).after_school
   #  end
   #  calendar_variables(after_school)
-  #end
+  end
   
   def hide_student
     student = Student.find(params[:id])
