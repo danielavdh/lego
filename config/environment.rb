@@ -21,8 +21,8 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 ############################# needs to be uncommented for lesson booking #############################
-   config.gem "ri_cal", :version => ">= 0.8.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
-   config.gem "icalendar", :version => ">= 1.1.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
+   #config.gem "ri_cal", :version => ">= 0.8.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
+   #config.gem "icalendar", :version => ">= 1.1.5" #that's all that is needed, and then rake gems:unpack to freeze it into the app!
 ######################################################################################################
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

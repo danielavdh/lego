@@ -2,8 +2,8 @@ require 'icalendar'
 
 class TeachingController < ApplicationController
   include TeachingHelper
-  #before_filter :superauthorize, :only => :studentzone
-  before_filter :authorize, :except => [:courses, :classes, :directions, :studentzone, :contact]
+  before_filter :superauthorize, :only => :studentzone
+  before_filter :authorize, :except => [:courses, :classes, :directions, :contact]
   before_filter :generate_key
   
   def index
@@ -43,26 +43,26 @@ class TeachingController < ApplicationController
   def blog
   end
 
-  def studentzone
-    if session[:user_id]
-      @msg_to_leonid = "Hi Leonid, click on a day number to set lessons for that day"
-    end
-    if request.post?
-      student = Student.authenticate(params[:firstname], params[:lastname], params[:password])
-      if student
-        session[:student_id] = student.id
-      else
-        @focus = "leonid.admin.focus('user_name');"
-        flash.now[:notice] = I18n.t("messages.flash_login")
-      end
-    else # any gets, be it with or without session (see in view)
-      @focus = "leonid.admin.focus('user_name');"
-    end
-    if session[:student_id]
-      after_school = Student.find_by_id(session[:student_id]).after_school
-    end
-    calendar_variables(after_school)
-  end
+  #def studentzone
+  #  if session[:user_id]
+  #    @msg_to_leonid = "Hi Leonid, click on a day number to set lessons for that day"
+  #  end
+  #  if request.post?
+  #    student = Student.authenticate(params[:firstname], params[:lastname], params[:password])
+  #    if student
+  #      session[:student_id] = student.id
+  #    else
+  #      @focus = "leonid.admin.focus('user_name');"
+  #      flash.now[:notice] = I18n.t("messages.flash_login")
+  #    end
+  #  else # any gets, be it with or without session (see in view)
+  #    @focus = "leonid.admin.focus('user_name');"
+  #  end
+  #  if session[:student_id]
+  #    after_school = Student.find_by_id(session[:student_id]).after_school
+  #  end
+  #  calendar_variables(after_school)
+  #end
   
   def hide_student
     student = Student.find(params[:id])
@@ -206,13 +206,13 @@ class TeachingController < ApplicationController
     end
   end
   
-  def calendar_variables(after_school)
-     @month = params[:month].to_i
-     @year = params[:year].to_i
-     @shown_month = Date.civil(@year, @month)
-     #@event_strips = Event.event_strips_for_month(@shown_month)
-     @event_strips = Lesson.event_strips_for_month(@shown_month, 0, after_school)
-  end
+  #def calendar_variables(after_school)
+  #   @month = params[:month].to_i
+  #   @year = params[:year].to_i
+  #   @shown_month = Date.civil(@year, @month)
+  #   #@event_strips = Event.event_strips_for_month(@shown_month)
+  #   @event_strips = Lesson.event_strips_for_month(@shown_month, 0, after_school)
+  #end
 
   def write_xml(student)
     url = "students/"+student.assetsPath
