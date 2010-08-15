@@ -88,6 +88,7 @@ var leonid={
 		flashvars: {
 		   xmlData: "",
 		   videoInfoData: "",
+		   mediaInfoData: "",  /*should replace videoInfoData!*/
            fileName: "",
            fileType: "",
            movieSize: "",

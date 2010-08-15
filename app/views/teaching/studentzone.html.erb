@@ -5,7 +5,7 @@
 <div id="studentZoneCalendar"
 	 title="<%= @msg_to_leonid %>">
 
-<% if session[:user_id] || session[:student_id] %>
+<% if session[:user_id] || session[:student_id] || session[:sudo_id] %>
 <%= event_calendar %>
 	
 <% else %>

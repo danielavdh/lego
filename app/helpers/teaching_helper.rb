@@ -16,7 +16,7 @@ module TeachingHelper
         :event_width => 120,
         :month_name_text => I18n.t('date.month_names')[@shown_month.month] + ' ' + @shown_month.strftime("%Y"),
         #:month_name_text => @shown_month.strftime("%B %Y"),
-        :previous_month_text => "<< " + month_link(@shown_month.last_month),
+        :previous_month_text => "<< " + month_link(@shown_month.prev_month),
         :next_month_text => month_link(@shown_month.next_month) + " >>"
       }
     end
