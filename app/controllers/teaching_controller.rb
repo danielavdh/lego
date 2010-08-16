@@ -62,6 +62,7 @@ class TeachingController < ApplicationController
   #    after_school = Student.find_by_id(session[:student_id]).after_school
   #  end
   #  calendar_variables(after_school)
+  render :nothing => true
   end
   
   def hide_student
