@@ -2,7 +2,7 @@ require 'icalendar'
 require 'date'
 class LessonsController < ApplicationController
 before_filter :authorize, :except => [:show, :book_lesson, :cancel_lesson]
-#include Icalendar
+include Icalendar
 
 
   # GET /lessons
