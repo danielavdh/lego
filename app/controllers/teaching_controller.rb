@@ -1,4 +1,4 @@
-#require 'icalendar'
+require 'icalendar'
 
 class TeachingController < ApplicationController
   include TeachingHelper
