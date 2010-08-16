@@ -44,7 +44,7 @@
     div#navigation, div#bodyNavigationStrip{background-color: #bcbccc;}
   </style>
 </head>
-<body onload="leonid.links.show_t_page('<%=action_name%>', '#a3a3bb'); <%= @focus %>; leonid.maps.initialize('<%=action_name%>', '<%=RAILS_ENV%>', '<%=@map%>');" onunload="GUnload('<%=RAILS_ENV%>')">
+<body onload="leonid.links.show_t_page('<%=action_name%>', '#a3a3bb'); <%#= @focus %>; leonid.maps.initialize('<%#=action_name%>', '<%#=RAILS_ENV%>', '<%#=@map%>');" onunload="GUnload('<%#=RAILS_ENV%>')">
 
 	<%#= render :partial => 'shared/bodyStrip' %>
 		
