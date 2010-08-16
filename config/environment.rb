@@ -2,7 +2,7 @@
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 # and I hope this is what I have achieved when rake rails:update after setting it here
-RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -55,3 +55,4 @@ end
 #                vendor/plugins/gemsonrails/tasks, 
 #             and vendor/plugins/gemsonrails/tasks are deprecated. 
 #  Use lib/tasks instead. (called from /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/tasks/rails.rb:10)
+######## AS FAR AS I CAN SEE 2.3.8. NEEDS NEWER RUBY PATCH THAN AVAILABLE ON JOYENT  ####
