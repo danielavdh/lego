@@ -5,11 +5,11 @@ left: 0px;
 }
 a.w_playing, a.w_playing:link, a.w_playing:visited{
 /*color: #660000;*/
-color: white;
+color: #f7e7e4;
 }
 a.w_teaching, a.w_teaching:link, a.w_teaching:visited{
 /*color: #181866;*/
-color: white;
+color: #f7e7e4;
 }
 a.w_playing:hover{
 /*color: #993333;*/
@@ -38,7 +38,7 @@ top: 347px;
 padding-top: 35px;
 font-size: 2em;
 font-weight: lighter;
-color: white;
+color: #f7e7e4;
 cursor: default;
 }
 /********************************* messages *************************************/
