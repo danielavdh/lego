@@ -1,6 +1,6 @@
 class PlayingController < ApplicationController
   
-  before_filter :authorize, :except => [:bio, :photos, :high_res_photos, :contact]
+  before_filter :authorize, :except => [:index, :bio, :photos, :high_res_photos, :contact]
   
   def index
   end
