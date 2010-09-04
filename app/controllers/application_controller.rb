@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       protect_from_forgery # See ActionController::RequestForgeryProtection for details
       filter_parameter_logging :password
 
-  protected
+protected
 
   def authorize
     guest_paths = ["playing/recordings", "playing/play_audio", "playing/stop_audio"]

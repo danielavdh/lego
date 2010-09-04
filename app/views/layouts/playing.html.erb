@@ -14,13 +14,18 @@
   <title>Leonid Gorokhov, performing</title>
   <%= stylesheet_link_tag 'playing' %>
   <%= javascript_include_tag :defaults, 'browser_detect', 'swfobject' %>
+  <script type="text/javascript">
+	leonid.scrollText.showArticle = function(articleId){
+		<%= remote_function(:url => {:action => 'show_article'}, :with => "'articleId=' + encodeURIComponent(articleId)") %>;
+	}
+  </script>
 </head>
 <body onload="leonid.page.resizeText(); leonid.links.show_page('<%=action_name%>', '#bbaca3');" 
 	  onresize="leonid.page.resizeText();"><!-- #3b2929  -->
 	
 	<% action_name == "index" ? actionName = "playing" : actionName = action_name -%>
 
-	<% if action_name=="bio"  || action_name=="recordings" || action_name=="photos" || action_name=="chambermusic" -%>
+	<% if action_name=="bio"  || action_name=="recordings" || action_name=="photos" || action_name=="chambermusic" || action_name=="reviews" -%>
 	<img id="<%= actionName %>_bkg_img"
 		 src="/images/playing/<%= actionName %>.jpg" />
 

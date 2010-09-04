@@ -4,22 +4,19 @@ background-color: #dddddd;
 }
 </style>
 
-<div id="reviewsContent">
-
-<% @articles.each do |a| %>
-
-<div class="articleDiv">
+<div id="reviewsTitle">
 	
-	<h3 class="flexi100"><%= a.publisher %><span class="flexi50">, <%= a.publish_date.to_date.to_formatted_s(:rfc822) if a.publish_date %><%= a.author %></span></h3>
+	<% @articles.each do |a| %>
+	<% puts a.publish_date.class %>
+		<h3 class="flexi120"
+			onclick="leonid.scrollText.showArticle('<%= a.id %>');"><%= a.publisher %></h3>
+		<p class="flexi33"><%= a.publish_date.to_formatted_s(:month_and_year)%></p>
+	<% end %>
 
-	<p class="flexi80"><%= a.artists %><%= ", " unless a.venue.blank? %><%= a.venue %></p>
+</div>
 
-	<div class="articleContent">
-		<%= a.content %>
-	</div>
-
-</div><hr style="margin:0px 30px; border: 2px ridge #ccc6c6;" />
-
-<% end %>
-
+<div id="scrollBlanket"
+	 style="display:none;">
+</div>
+<div id="reviewsContent">
 </div>

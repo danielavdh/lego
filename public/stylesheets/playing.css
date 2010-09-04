@@ -184,25 +184,63 @@ div#content_text p, div#quote1 p{
 font-style: normal;
 }
 /********************************* REVIEWS *************************************/
-div#reviewsContent{
+img#reviews_bkg_img{
 position: absolute;
-left: 3%;
-top: 10%;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
 }
-div.articleDiv{
+div#reviews_bar{
+display: none;
+}
+div#reviewsTitle{
+position: absolute;
+left: 2%;
+top: 37%;
+width: 13%;
+height: 60%;
+text-align: left;
+}
+div#reviewsTitle h3{
+margin: 10% 0% 2% 0%;
+font-weight: bold;
+cursor: pointer;
+}
+div#reviewsTitle p{
+color: #333333;
+font-style: normal;
+margin-left: 2%;
+}
+div#scrollBlanket, div#reviewsContent{
+position: absolute;
+left: 62%;
+top: 13%;
+width: 37%;
+height: 86%;
+}
+div#scrollBlanket{
+background-color: #e7e3e0;
+}
+div#reviewsContent{
 color: black;
 text-align: left;
 }
-div.articleDiv p, h3{
+div#reviewsContent p, h3{
 margin-top: 1%;
 color: black;
+font-size: 95%;
 }
-div.articleContent p, h3{
+div#reviewsContent h3{
 margin: 2% 0%;
-font-style: normal;
+font-weight: bold;
+font-size: 125%;
+}
+div#articleContent{
+margin-top: 6%;
 }
 img#reviews_en_1{
-width: 85%;
+width: 98%;
 margin: 1% 0%;
 }
 /********************************* PHOTOS *************************************/
@@ -299,32 +337,6 @@ color: #ccb4b4;
 a.chambermusic_text:hover{
 color: #997070;
 }
-/*div#current_projects{
-float: right;
-width: 40%;
-margin: 2% 0% 2% 3%;
-padding: 1% 1% 2% 2%;
-background-color: #491802;
-border: 2px ridge #491802;
-}
-div#current_projects h3, h4, p{
-font-weight: normal;
-font-style: italic;
-color: white;
-}
-div#current_projects h3, h4{
-margin: 5% 0% 5% 0%;
-padding: 0;
-}
-div#current_projects h4, p{
-padding: 0px 0px 0px 0px;
-}
-div#current_projects p{
-font-size: 0.8em;
-}
-div#content_text p, div#quote1 p{
-font-style: normal;
-}*/
 /********************************* RECORDINGS *************************************/
 img#recordings_bkg_img{
 position: absolute;
@@ -356,35 +368,6 @@ padding-bottom: 5%;
 div#leonidVideo p, div#hstVideo p, div#specialVideo p{
 font-weight: normal;
 }
-/*div#audio_selection{
-position: absolute;
-top: 23%;
-left: 3%;
-width: 10%;
-}
-div#audio_selection input{
-padding: 5%;
-border: 2px groove #bfb0ac;
-background-color: #bfb0ac;
-color: #4c2a27;
-cursor: pointer;
-}
-div#video_selection{
-position: absolute;
-right: 26%;
-top: 41%;
-width: 74%;
-}
-div#video_selection form{
-display: inline;
-float: right;
-padding: 0% 0% 3% 3%;
-}
-div#video_selection select{
-border: 1px outset #bdaa21;
-background-color: #bdaa21;
-color: #4c2a27;
-}*/
 div#mediaBlanket{
 position: fixed;
 left: 0%;

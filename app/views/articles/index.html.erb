@@ -17,6 +17,7 @@
   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h article.language %></td>
     <td><%=h article.display %></td>
+    <td><%=h article.publish_date %></td>
     <td><%=h article.concert_date %></td>
 	<td><%=h truncate(article.publisher, :length => 15) %></td>
     <td><%=h article.author %></td>

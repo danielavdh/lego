@@ -56,11 +56,10 @@ var leonid={
 				}
 			}
 			for(j=0; j<allTags.length; j++){
-				if(allClasses[j]=="flexi50"){
-					allTags[j].style.fontSize = (width/1300) + "em";
-					//alert(allTags[j].style.fontSize);
-				}else if(allClasses[j]=="login_links"){
+				if(allClasses[j]=="flexi33" || allClasses[j]=="login_links"){
 					allTags[j].style.fontSize = (width/1650) + "em";
+				}else if(allClasses[j]=="flexi50"){
+					allTags[j].style.fontSize = (width/1300) + "em";
 				}else if(allClasses[j]=="flexi80" || allClasses[j]=="studentFields"){
 					allTags[j].style.fontSize = (width/1150) + "em";
 				}else if(allClasses[j]=="flexi100" || allClasses[j]=="project_links"){
@@ -101,8 +100,12 @@ var leonid={
 		   allowScriptAccess: "sameDomain"
 		},
 		attr:{},
-		mediaShow: function(){
-			 Effect.Appear('mediaBlanket',{ from: 0.0, to: 0.75, duration: 0.5 });
+		mediaShow: function(elementId){
+			if(elementId){
+			  Effect.Appear(elementId,{ from: 0.0, to: 0.75, duration: 0.5 });
+			}else{
+			  Effect.Appear("mediaBlanket",{ from: 0.0, to: 0.75, duration: 0.5 });
+			}
 		},
 		getReference: function(e){
 			leonid.movies.movie = e.ref;
@@ -175,6 +178,7 @@ var leonid={
 		trish: null
 	},
 	scrollText: {
+		showArticle: null,
 		move: function(){
 			var v1=arguments,v2=v1.length,v3='content_container',v4='content';
 			var v5=leonid.scrollText.getElement401(v3),v6=leonid.scrollText.getElement401(v4);

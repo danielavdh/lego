@@ -24,6 +24,14 @@ class PlayingController < ApplicationController
     lang = session[:locale]
     @articles = Article.find(:all, :conditions => ["display='yes' and language = ?" , lang], :order => "concert_date DESC")
   end
+  def show_article
+    @article = Article.find_by_id(params[:articleId])
+    render :update do |page|
+        page.call 'leonid.movies.mediaShow', 'scrollBlanket'
+        page.replace_html 'reviewsContent', :partial => 'article_content', 
+                                            :locals => {:article => @article}
+    end
+  end
   
   def photos
   end
