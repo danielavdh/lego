@@ -21,6 +21,7 @@ class PlayingController < ApplicationController
   end
   
   def reviews
+    @article = Article.find_by_id(12)
     lang = session[:locale]
     @articles = Article.find(:all, :conditions => ["display='yes' and language = ?" , lang], :order => "concert_date DESC")
   end
@@ -28,7 +29,8 @@ class PlayingController < ApplicationController
     @article = Article.find_by_id(params[:articleId])
     render :update do |page|
         page.call 'leonid.movies.mediaShow', 'scrollBlanket'
-        page.replace_html 'reviewsContent', :partial => 'article_content', 
+        page.call 'leonid.page.showScroller'
+        page.replace_html 'content', :partial => 'article_content', 
                                             :locals => {:article => @article}
     end
   end

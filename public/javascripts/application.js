@@ -68,6 +68,19 @@ var leonid={
 					allTags[j].style.fontSize = (width/850) + "em";
 				}
 			}
+		},
+		toggleDisplay: function(elementId){
+			element = document.getElementById(elementId);
+			if(element.style.display=="none"){
+				element.style.display = "block";
+			}else{
+				element.style.display = "none;"
+			}
+		},
+		showScroller: function(){
+			if(document.getElementById("scroller").style.display != "block"){
+				document.getElementById("scroller").style.display = "block";
+			}
 		}
 	},
 	links:{

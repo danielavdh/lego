@@ -100,21 +100,21 @@ margin-top: 10%;
 table.performingFields{
 width: 94%;
 table-layout: fixed;
-text-align: left;
+text-align: justify;
 vertical-align: middle;
 color: white;
 font-style: normal;
-margin:10% 3% 0% 3%;
+margin: 10% 3% 0% 3%;
 border-collapse: collapse;
 }
 td.performingFieldsFirstRow{
 width: 10%;
-border-bottom: 2px ridge #d0d0d0;
+/*border-bottom: 2px ridge #d0d0d0;*/
 }
 tr.performingFieldsNotFirstRow td{
 font-style: normal;
 padding: 2% 0% 2% 0%;
-border-bottom: 2px ridge #d0d0d0;
+/*border-bottom: 2px ridge #d0d0d0;*/
 }
 table.performingFields td p{
 font-style: normal;
@@ -242,6 +242,11 @@ margin-top: 6%;
 img#reviews_en_1{
 width: 98%;
 margin: 1% 0%;
+}
+p#articleBox{
+background-color: #bbaca3;
+padding: 3%;
+border: 2px ridge #aa9b92;
 }
 /********************************* PHOTOS *************************************/
 img#photos_bkg_img{
