@@ -1,6 +1,6 @@
 class PlayingController < ApplicationController
   
-  before_filter :authorize, :only => [:chambermusic, :recordings]
+  before_filter :authorize, :except => [:index, :bio, :reviews, :show_article, :photos, :contact, :high_res_photos]
   
   def index
   end
@@ -128,8 +128,8 @@ class PlayingController < ApplicationController
     @photo = params[:photo] || params[:variable]  #params[:variable] at language switch of this page
   end
 
-  def diary
-  end
+  #def diary
+  #end
   
   private
   

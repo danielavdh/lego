@@ -40,11 +40,6 @@
 									   				  :action => :studentzone},
 									   				  :class => "teaching_links" %>
 		</td>
-		<td id="contact" 
-			class="flexi80"><%=link_to "contact", {:controller => :teaching,
-									  			   :action => :contact},
-									  			   :class => "teaching_links" %>
-		</td>
 	   <% if session[:user_id] || session[:sudo_id] %>
 		<td id="projects" 
 			 class="flexi80"><%=link_to "add student", {:controller => :students, 
@@ -56,48 +51,3 @@
 			class="flexi80">&nbsp;</td>
 	</tr>
 </table>
-
-<% if action_name=="hammer"%>
-
-<div id="navigation">
-	
-	<div class="top_links">
-		<%=link_to "home", {:controller => :welcome,
-								:action => :index},
-								:class => "home_link" %><br />
-		 <%=link_to "performing", {:controller => :playing,
-									:action => :index},
-									:class => "playing_links" %>
-	</div>
-
-	<ul class="t_navigation">
-		 <li id="index"><%=link_to "teaching", {:controller => :teaching,
-									:action => :index},
-									:class => "teaching_links" %></li>
-   	 	 <li id="courses"><%=link_to "courses", {:controller => :teaching,
-									:action => :courses},
-									:class => "teaching_links" %></li>
-   	 	 <li id="classes"><%=link_to "masterclasses", {:controller => :teaching,
-									:action => :classes},
-									:class => "teaching_links" %></li>
-   	 	 <li id="recordings"><%=link_to "videos", {:controller => :teaching,
-										   :action => :recordings},
-										   :class => "teaching_links" %></li>
-   	 	 <li id="students"><%=link_to "students", {:controller => :teaching,
-									 :action => :students},
-									 :class => "teaching_links" %></li>
-   	 	 <li id="studentzone"><%=link_to "studentzone", {:controller => :teaching, 
-									 :action => :studentzone},
-									 :class => "teaching_links" %></li>
-   	 	 <li id="contact"><%=link_to "contact", {:controller => :teaching,
-								 :action => :contact},
-								 :class => "teaching_links" %></li>
-	   <% if session[:user_id] %>
-   	 	 <li><%=link_to "add student", {:controller => :students, 
-									 :action => :new},
-									 :class => "teaching_links" %></li>
-	   <% end %>
-	</ul>
-	
-</div>
-<% end %>

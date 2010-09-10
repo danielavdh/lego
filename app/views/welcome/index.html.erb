@@ -3,10 +3,10 @@
 <% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching w_teaching} %>
 <% elsif session[:friend_id] || session[:guest_id] %>
 <% playingClass = %w{w_playing w_playing w_playing w_playing w_playing_passive w_playing w_playing} %>
-<% teachingClass = %w{w_teaching_passive w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
+<% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
 <% else %>
 <% playingClass = %w{w_playing w_playing w_playing w_playing w_playing_passive w_playing_passive w_playing} %>
-<% teachingClass = %w{w_teaching_passive w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
+<% teachingClass = %w{w_teaching w_teaching w_teaching w_teaching_passive w_teaching_passive w_teaching w_teaching} %>
 <% end %>
 
 <style type="text/css">
@@ -74,9 +74,6 @@ cursor: default;
 		 <li><%=link_to "studentzone", {:controller => :teaching,
 								 		:action => :studentzone},
 								 		:class => teachingClass[5] %></li>
-		 <li><%=link_to "contact", {:controller => :teaching,
-								 :action => :contact},
-								 :class => teachingClass[6] %></li>
 	   <% if session[:user_id] || session[:sudo_id] %>
    	 	 <li><%=link_to "add&nbsp;student", {:controller => :students, 
 									 :action => :index},
