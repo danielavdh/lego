@@ -80,6 +80,9 @@ float: left;
 width: 62%;
 margin-left: 3%;
 }
+img#hmtImage{
+opacity: 0.2;
+}
 div#teachingIndex div{
 margin-top: 4%;
 }
