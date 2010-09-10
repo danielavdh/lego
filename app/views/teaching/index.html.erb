@@ -1,3 +1,31 @@
-<div id="indexTitle">
-	<h3 class="flexi120"><%= I18n.t("teaching.index.title") %></h3>
+<style>
+body{
+background-color: #242424;
+}
+</style>
+<div id="teachingIndex">
+	
+	<img class="teachingPic"
+		 src="/images/teaching/lg_index.jpg" />
+
+	<%= link_to(image_tag("/images/teaching/hmt.jpg",
+						  :id => "hmtImage",
+						  :title => "opens HMT Hannover in a new window",
+						  :alt => "Hochschule für Musik und Theater Hannover"),
+	 					  "http://www.hmt-hannover.de/de/hochschule/lehrende/e-h/prof-leonid-gorokhov/",
+						  {:target => "blank"})%>
+						
+	<div>
+		<%= I18n.t("teaching.index.text") %>
+	</div>
+	<div style="text-align: center;">
+		<p class="flexi120"><b>Hochschule für Musik und Theater</b></p>
+		<p class="flexi120">Prof. Leonid Gorokhov</p>
+		<p class="flexi120">Emmichplatz 1</p>
+		<p class="flexi120">30175 Hannover</p>
+		<p class="flexi120"><%= I18n.t("teaching.contact.germany")%></p>
+		<p class="flexi120">Email: <%= mail_to "leonid.gorokhov@hmt-hannover.de", "Prof. Leonid Gorokhov" %></p>
+		
+	</div>
+
 </div>

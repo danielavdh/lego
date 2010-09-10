@@ -155,7 +155,9 @@ en:
                 return invitation to the Dart Festival and the concert at the Mendelssohn Saal of the Hamburg Musik Hochschule.</p>"
   teaching:
     index:
-      title: "General page about teaching"
+      text: "<p class=\"flexi80\">Leonid Gorokhov is a Professor at the <a href='http://www.hmt-hannover.de/en/' target='_blank' class='bio_text'>Hochschule für Musik und Theater</a> in Hannover, Germany.
+                He studied at the St. Petersburg Conservatoire with Anatoli Nikitin and took part in masterclasses with Daniil Shafran.</p>
+             <p class=\"flexi80\">As a soloist he frequently collaborated with conductor Yehudi Menuhin. He has recorded for Supraphon, Melodiya, Cello Classics, Olympia, ASV Gold and Chandos.</p>"
     courses:
       title: "Courses"
       click: "mouse click links to course site"
