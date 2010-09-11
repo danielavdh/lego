@@ -75,33 +75,30 @@ height: 84%;
 color: #f8f8f0;
 text-align: justify;
 }
-img#hmtImage, div#teachingIndex div{
-float: left;
-width: 62%;
-margin-left: 3%;
-}
-img#hmtImage{
-width: 94%;
-opacity: 0.2;
-}
-div#teachingIndex div{
-margin-top: 5%;
-}
 img.teachingPic{
 position: absolute;
 bottom: 0%;
 right: 0%;
-width: 33%;
+width: 100%;
 }
-div#teachingIndex p{
+div#teachingIndexText{
+position: absolute;
+left: 3%;
+bottom: 20%;
+width: 62%;
+}
+div#teachingIndexText div{
+margin-top: 5%;
+}
+div#teachingIndexText p{
 font-style: normal;
 line-height: 150%;
 }
-div#teachingIndex a:link, div#teachingIndex a:visited{
+div#teachingIndexText a:link, div#teachingIndexText a:visited{
 color: #dddddd;
 font-style: italic;
 }
-div#teachingIndex a:hover{
+div#teachingIndexText a:hover{
 color: #787878;
 }
 
