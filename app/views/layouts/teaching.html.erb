@@ -19,13 +19,11 @@
 </head>
 <body onload="leonid.page.resizeText(); leonid.links.show_page('<%=action_name%>', '#a3a3bb'); <%= @focus %>; leonid.maps.initialize('<%=action_name%>', '<%=RAILS_ENV%>', '<%=@map%>');" onunload="GUnload('<%=RAILS_ENV%>')" onresize="leonid.page.resizeText();">
 	
-	<%# action_name == "index" ? actionName = "playing" : actionName = action_name -%>
+	<% if action_name=="index" -%>
+	<img id="<%= action_name %>_bkg_img"
+		 src="/images/teaching/<%= action_name %>.jpg" />
 
-	<% if action_name=="bio"  || action_name=="photos" || action_name=="chambermusic" -%>
-	<img id="<%= actionName %>_bkg_img"
-		 src="/images/playing/<%= actionName %>.jpg" />
-
-	<div id="<%= actionName %>_bar">
+	<div id="<%= action_name %>_bar">
 	</div>
 	<% end -%>
 

@@ -2,12 +2,18 @@
 body{
 background-color: #242434;
 }
+.login_links, .login_links:link, .login_links:visited, .login_link{
+color: #ffffff;
+}
+.login_links:hover{
+color: #999999;
+}
 </style>
 <div id="teachingIndex">
 	
-	<img class="teachingPic"
-		 src="/images/teaching/lg_index.jpg" />
-
+	<!-- <img class="teachingPic"
+			 src="/images/teaching/lg_index.jpg" /> -->
+	
 	<%#= link_to(image_tag("/images/teaching/lg_index.jpg",
 						  :id => "teachingPic",
 						  :title => "opens HMT Hannover in a new window",
@@ -20,7 +26,10 @@ background-color: #242434;
 			<%= I18n.t("teaching.index.text") %>
 		</div>
 		<div style="text-align: center;">
-			<p class="flexi120"><b>Hochschule für Musik und Theater</b></p>
+			<p class="flexi120"><b>
+			<%= link_to "Hochschule für Musik und Theater", "http://www.hmt-hannover.de/de/hochschule/lehrende/e-h/prof-leonid-gorokhov/", 
+				:target => "blank" %>
+			</b></p>
 			<p class="flexi120">Prof. Leonid Gorokhov</p>
 			<p class="flexi120">Emmichplatz 1</p>
 			<p class="flexi120">30175 Hannover</p>

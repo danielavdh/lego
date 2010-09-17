@@ -67,6 +67,16 @@ color:#444499;
 
 /********************************* INDEX *************************************/
 
+img#index_bkg_img{
+position: absolute;
+bottom: 0%;
+right: 0%;
+width: 100%;
+height: 84%;
+}
+div#index_bar{
+display: none;
+}
 div#teachingIndex{
 position: absolute;
 top: 16%;
@@ -75,12 +85,6 @@ width: 100%;
 height: 84%;
 color: #f8f8f0;
 text-align: justify;
-}
-img.teachingPic{
-position: absolute;
-bottom: 0%;
-right: 0%;
-width: 100%;
 }
 div#teachingIndexText{
 position: absolute;
