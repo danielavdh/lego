@@ -69,6 +69,19 @@ var leonid={
 				}
 			}
 		},
+		resizeImg: function(action){
+			if(action == "index"){
+				if(BrowserDetect.browser=="Explorer"){
+					var width = document.body.clientWidth;
+					var height = document.body.clientHeight;
+				}else{
+					width = window.innerWidth;
+					height = window.innerHeight;
+				}
+				document.getElementById("index_bkg_img").style.height = (0.84 * height) + "px";
+				document.getElementById("index_bkg_img").style.width = (1.86 * 0.84 * height) + "px";
+			}
+		},
 		toggleDisplay: function(elementId){
 			element = document.getElementById(elementId);
 			if(element.style.display=="none"){
@@ -99,7 +112,7 @@ var leonid={
 		movie: null,
 		flashvars: {
 		   xmlData: "",
-		   videoInfoData: "",
+		   videoInfoData: "",	/* put data in in database :)  */
 		   mediaInfoData: "",  /*should replace videoInfoData!*/
            fileName: "",
            fileType: "",

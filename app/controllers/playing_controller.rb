@@ -163,7 +163,8 @@ class PlayingController < ApplicationController
     leonid = "Leonid Gorokhov"
     hst = "Hermitage String Trio"
     special = "Special Event"
-    return {:leonid1 => {:title => leonid, :composer => work('leonid1',0), :piece => work('leonid1',1), :with => "Jupiter Chamber Orchestra", :recDate => Date.new(2009,11,8), :screenRatio => "4:3"},
+    return {:leonid1 => {:title => leonid, :composer => work('leonid1',0), :piece => work('leonid1',1), :with => "Saratov Philharmonic Orchestra", :recDate => Date.new(2011,03,26), :screenRatio => "16:9"},
+            :leonid2 => {:title => leonid, :composer => work('leonid2',0), :piece => work('leonid2',1), :with => "Jupiter Chamber Orchestra", :recDate => Date.new(2009,11,8), :screenRatio => "4:3"},
             :hst1 => {:title => hst, :composer => work('hst1',0), :piece => work('hst1',1), :recDate => Date.new(2010, 03,28), :screenRatio => "16:9"},
             :hst2 => {:title => hst, :composer => work('hst2',0), :piece => work('hst2',1), :recDate => Date.new(2010, 03,28), :screenRatio => "16:9"},
             :special1 => {:title => special, :composer => work('special1',0), :piece => work('special1',1), :recDate => Date.new(2010, 03,28), :screenRatio => "16:9"},

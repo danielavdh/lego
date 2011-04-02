@@ -67,7 +67,7 @@ color:#444499;
 
 /********************************* INDEX *************************************/
 
-img#index_bkg_img{
+img#index_bkg_img{  /*1024x550 LG 364x515 (width of photo 70% of height of photo; 186% 1024/550, 54% 550/1024))*/
 position: absolute;
 bottom: 0%;
 right: 0%;
