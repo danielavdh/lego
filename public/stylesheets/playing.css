@@ -384,13 +384,14 @@ height: 100%;
 background-color: #000020;
 }
 div#video_area, div#audio_area{
-position: fixed;
+position: absolute;
 top: 15%;
 left: 50%;
 margin-left: -330px;
 }
 div#audio_area{
-top: 190px;
+position: fixed;
+top: 170px;
 margin-left: -250px;
 }
 div#video_content{

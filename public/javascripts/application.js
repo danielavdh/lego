@@ -82,7 +82,7 @@ var leonid={
 				document.getElementById("index_bkg_img").style.width = (1.86 * 0.84 * height) + "px";
 			}
 		},
-		resizeMovie: function(action){
+		/*resizeMovie: function(action){
 			if(action == "recordings"){
 				if(BrowserDetect.browser=="Explorer"){
 					var width = document.body.clientWidth;
@@ -92,11 +92,11 @@ var leonid={
 					height = window.innerHeight;
 				}
 			//1024 ==> 645  (124% of  movie height)
-			//658 ==> 520  (80% of page height)
+			//658 ==> 520  (80% of page height) (.78*658=513 ==> safe)
 			leonid.movies.swfHeight = 0.78 * height;
 			leonid.movies.swfWidth = leonid.movies.swfHeight * 1.24;
 			}
-		},
+		},*/
 		toggleDisplay: function(elementId){
 			element = document.getElementById(elementId);
 			if(element.style.display=="none"){
@@ -161,8 +161,8 @@ var leonid={
 			leonid.movies.movie.unloadAudio();
 		},
 		loadVideoPlayer: function(){
-			//swfobject.embedSWF("../mediaPlayer.swf", "videoSWF", "645", "520", "9.0.115", false, leonid.movies.flashvars, leonid.movies.paramsOffWhite, leonid.movies.attr, leonid.movies.getReference);
-			swfobject.embedSWF("../mediaPlayer.swf", "videoSWF", leonid.movies.swfWidth, leonid.movies.swfHeight, "9.0.115", false, leonid.movies.flashvars, leonid.movies.paramsOffWhite, leonid.movies.attr, leonid.movies.getReference);
+			swfobject.embedSWF("../mediaPlayer.swf", "videoSWF", "645", "520", "9.0.115", false, leonid.movies.flashvars, leonid.movies.paramsOffWhite, leonid.movies.attr, leonid.movies.getReference);
+			//swfobject.embedSWF("../mediaPlayer.swf", "videoSWF", leonid.movies.swfWidth, leonid.movies.swfHeight, "9.0.115", false, leonid.movies.flashvars, leonid.movies.paramsOffWhite, leonid.movies.attr, leonid.movies.getReference);
 		},
 		unloadVideoPlayer:function(){
 			if($('videoSWF')){
