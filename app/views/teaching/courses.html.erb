@@ -4,6 +4,37 @@
 
 <div class="coursesFields"
 	 title="<%= I18n.t('teaching.courses.click') %>"
+	 onclick="window.open('http://www.dipta.cat/festivalmusicatarragona/', '_blank')">
+
+	<%= link_to(image_tag("/images/teaching/courses/tarragona_2011.jpg",
+						  :class => "course_link",
+						  :title => I18n.t("teaching.courses.click"),
+						  #:size => "450x330",
+						  :alt => "Festival internacional de Musica de Tarragona"),
+	 					  "http://www.dipta.cat/festivalmusicatarragona/",
+						  {:target => "_blank"})%>
+						
+	<% image2 = link_to(image_tag("/images/teaching/courses/tarragona_conservatori.jpg",
+						  :class => "course_link2",
+						  :title => I18n.t("teaching.courses.click"),
+						  #:size => "215x163",
+						  :alt => "Festival internacional de Musica de Tarragona"),
+	 					  "http://www.tarragonafestivaldemusica.cat/",
+						  {:target => "_blank"})%>
+
+	<div class="course_description">
+	<a href="http://www.tarragonafestivaldemusica.cat/"
+	   target="blank">
+		<p class="flexi100"><b>Festival Internacional de Musica de Tarragona, Catalunya</b><br />
+		  	7-10 July 2011</p><br />
+	</a>
+	<%= I18n.t("teaching.courses.description3") %>
+											
+	</div>
+</div>
+
+<div class="coursesFields"
+	 title="<%= I18n.t('teaching.courses.click') %>"
 	 onclick="window.open('http://konzertarbeitswochen.de/', '_blank')">
 
 	<%= link_to(image_tag("/images/teaching/courses/goslar_2010_#{session[:locale]}.jpg",
@@ -25,6 +56,7 @@
 	</div>
 	
 </div>
+
 <div class="coursesFields"
 	 title="<%= I18n.t('teaching.courses.click') %>"
 	 onclick="window.open('http://www.tarragonafestivaldemusica.cat/', '_blank')">
