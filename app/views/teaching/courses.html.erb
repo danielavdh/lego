@@ -2,11 +2,75 @@
 	<h3 class="flexi120"><%= I18n.t("teaching.courses.title") %></h3>
 </div>
 
+<% if session[:locale].to_s == "de" %>
+	<% link_to_course = "http://www.palazzoricci.com/veranstaltungen/kammermusikwoche-2012/"%>
+<% else %>
+	<% link_to_course = "http://www.palazzoricci.com/en/events/chamber-music-week-2012/"%>
+<% end %>
+
 <div class="coursesFields"
 	 title="<%= I18n.t('teaching.courses.click') %>"
+	 onclick='window.open("<%= link_to_course %>", "_blank")'>
+
+	<%= image_tag("/images/teaching/courses/montepulciano_2012.jpg",
+						  :class => "course_link",
+						  :title => I18n.t("teaching.courses.click"),
+						  #:size => "450x330",
+						  :alt => "Palazzo Ricci, Chamber Music Week 2012") %>
+						
+						
+	<div class="course_description">
+	<a href="<%= link_to_course %>"
+	   target="blank">
+		<p class="flexi100"><b><%= I18n.t("teaching.courses.title5") %></b><br />
+		  	<%= I18n.t("teaching.courses.date5") %></p><br />
+	</a>
+	<%= I18n.t("teaching.courses.description5") %>
+											
+	</div>
+</div>
+
+<% if session[:locale].to_s == "de" %>
+	<% link_to_course = "http://www.musikinbayern.de/Kurse-c698/International-Summer-Academy-for-Young-Artists-e29342.php"%>
+<% else %>
+	<% link_to_course = "http://www.musikinbayern.de/International-Summer-Academy-for-Young-Artists-c437034/International-Summer-Academy-for-Young-Artists-e437188.php"%>
+<% end %>
+
+<div class="coursesFields"
+	 title="<%= I18n.t('teaching.courses.click') %>"
+	 onclick='window.open("<%= link_to_course %>", "_blank")'>
+
+	<%= image_tag("/images/teaching/courses/marktoberdorf_2012.jpg",
+						  :class => "course_link",
+						  :title => I18n.t("teaching.courses.click"),
+						  #:size => "450x330",
+						  :alt => "Bayerische Musikakademie Marktoberdorf") %>
+						
+						
+	<%#= link_to(image_tag("/images/teaching/courses/marktoberdorf_2012.jpg",
+						  :class => "course_link",
+						  :title => I18n.t("teaching.courses.click"),
+						  #:size => "450x330",
+						  :alt => "Bayerische Musikakademie Marktoberdorf"),
+						  link_to_course,
+						  {:target => "_blank"})%>
+
+	<div class="course_description">
+	<a href="<%= link_to_course %>"
+	   target="blank">
+		<p class="flexi100"><b><%= I18n.t("teaching.courses.title4") %></b><br />
+		  	<%= I18n.t("teaching.courses.date4") %></p><br />
+	</a>
+	<%= I18n.t("teaching.courses.description4") %>
+											
+	</div>
+</div>
+
+<!-- <div class="coursesFields"
+	 title="<%#= I18n.t('teaching.courses.click') %>"
 	 onclick="window.open('http://www.dipta.cat/festivalmusicatarragona/', '_blank')">
 
-	<%= link_to(image_tag("/images/teaching/courses/tarragona_2011.jpg",
+	<%#= link_to(image_tag("/images/teaching/courses/tarragona_2011.jpg",
 						  :class => "course_link",
 						  :title => I18n.t("teaching.courses.click"),
 						  #:size => "450x330",
@@ -14,30 +78,22 @@
 	 					  "http://www.dipta.cat/festivalmusicatarragona/",
 						  {:target => "_blank"})%>
 						
-	<% image2 = link_to(image_tag("/images/teaching/courses/tarragona_conservatori.jpg",
-						  :class => "course_link2",
-						  :title => I18n.t("teaching.courses.click"),
-						  #:size => "215x163",
-						  :alt => "Festival internacional de Musica de Tarragona"),
-	 					  "http://www.tarragonafestivaldemusica.cat/",
-						  {:target => "_blank"})%>
-
 	<div class="course_description">
 	<a href="http://www.tarragonafestivaldemusica.cat/"
 	   target="blank">
 		<p class="flexi100"><b>Festival Internacional de Musica de Tarragona, Catalunya</b><br />
 		  	7-10 July 2011</p><br />
 	</a>
-	<%= I18n.t("teaching.courses.description3") %>
+	<%#= I18n.t("teaching.courses.description3") %>
 											
 	</div>
 </div>
 
 <div class="coursesFields"
-	 title="<%= I18n.t('teaching.courses.click') %>"
+	 title="<%#= I18n.t('teaching.courses.click') %>"
 	 onclick="window.open('http://konzertarbeitswochen.de/', '_blank')">
 
-	<%= link_to(image_tag("/images/teaching/courses/goslar_2010_#{session[:locale]}.jpg",
+	<%#= link_to(image_tag("/images/teaching/courses/goslar_2010_#{session[:locale]}.jpg",
 						  :class => "course_link",
 						  :title => I18n.t("teaching.courses.click"),
 						  #:size => "450x325",
@@ -52,16 +108,16 @@
 		<p class="flexi100"><b>Internationale Konzertarbeitswochen, Goslar</b><br />
 			15-29 August 2010</p><br />
 	</a>
-	<%= I18n.t("teaching.courses.description1") %>
+	<%#= I18n.t("teaching.courses.description1") %>
 	</div>
 	
 </div>
 
 <div class="coursesFields"
-	 title="<%= I18n.t('teaching.courses.click') %>"
+	 title="<%#= I18n.t('teaching.courses.click') %>"
 	 onclick="window.open('http://www.tarragonafestivaldemusica.cat/', '_blank')">
 
-	<%= link_to(image_tag("/images/teaching/courses/tarragona_2010.jpg",
+	<%#= link_to(image_tag("/images/teaching/courses/tarragona_2010.jpg",
 						  :class => "course_link",
 						  :title => I18n.t("teaching.courses.click"),
 						  #:size => "450x330",
@@ -69,7 +125,7 @@
 	 					  "http://www.tarragonafestivaldemusica.cat/",
 						  {:target => "_blank"})%>
 						
-	<% image2 = link_to(image_tag("/images/teaching/courses/tarragona_conservatori.jpg",
+	<%# image2 = link_to(image_tag("/images/teaching/courses/tarragona_conservatori.jpg",
 						  :class => "course_link2",
 						  :title => I18n.t("teaching.courses.click"),
 						  #:size => "215x163",
@@ -83,8 +139,8 @@
 		<p class="flexi100"><b>Festival Internacional de Musica de Tarragona, Catalunya</b><br />
 		  	8-11 July 2010</p><br />
 	</a>
-	<%= I18n.t("teaching.courses.description2", :image2 => image2) %>
+	<%#= I18n.t("teaching.courses.description2", :image2 => image2) %>
 											
-	</div>
+	</div> -->
 </div>
 
