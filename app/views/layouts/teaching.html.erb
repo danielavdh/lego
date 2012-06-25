@@ -15,9 +15,10 @@
   <title>Leonid Gorokhov, teaching</title>
   <%= stylesheet_link_tag 'teaching', 'event_calendar'  %>
   <%= javascript_include_tag :defaults, 'browser_detect', 'swfobject', 'event_calendar' %>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=<%= @key %>" type="text/javascript"></script>
+  <!--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=<%= @key %>" type="text/javascript"></script>-->
 </head>
-<body onload="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>'); leonid.links.show_page('<%=action_name%>', '#a3a3bb'); <%= @focus %>; leonid.maps.initialize('<%=action_name%>', '<%=RAILS_ENV%>', '<%=@map%>');" onunload="GUnload('<%=RAILS_ENV%>')" onresize="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>');">
+<!--<body onload="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>'); leonid.links.show_page('<%=action_name%>', '#a3a3bb'); <%#= @focus %>; leonid.maps.initialize('<%=action_name%>', '<%#=RAILS_ENV%>', '<%#=@map%>');" onunload="GUnload('<%#=RAILS_ENV%>')" onresize="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>');">-->
+<body onload="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>'); leonid.links.show_page('<%=action_name%>', '#a3a3bb'); <%= @focus %>;" onresize="leonid.page.resizeText(); leonid.page.resizeImg('<%= action_name %>');">
 	
 	<% if action_name=="index" -%>
 	<img id="<%= action_name %>_bkg_img"
