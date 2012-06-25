@@ -74,6 +74,10 @@ var leonid={
 				if(BrowserDetect.browser=="Explorer"){
 					var width = document.body.clientWidth;
 					var height = document.body.clientHeight;
+					//explorer (8?) sees the body as height = 0...
+					if(height==0){
+						height = 0.6 * width;
+					}
 				}else{
 					width = window.innerWidth;
 					height = window.innerHeight;
